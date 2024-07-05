@@ -10,6 +10,7 @@ body {
   min-height: 6666px;
   overflow-x: hidden;
   overflow-y: hidden;
+  zoom: 1.5; /* Увеличение размера на 50% */
 }
 
 .mainContainer {
@@ -46,7 +47,7 @@ body {
   font-size: 100%;
   text-align: center;
   background-color: #272727;
-  border-image: url("image/border.png") 35%;
+  border-image: url("image/border.png") 0%;
   border-image-width: 1px;
   border-image-outset: 2px;
   color: rgb(146, 150, 154);;

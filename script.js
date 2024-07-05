@@ -1,4 +1,4 @@
-let currentSelection = ""; // в пустой залупке хранится выбранный элемент
+let currentSelection = ""; // в пустой темке хранится выбранный элемент
 
 function handleItemClick(itemName) {
   currentSelection = itemName;
@@ -50,6 +50,7 @@ const mantra = [
   "sparks Swap",
   "Lightning Assault",
   "Lightning Cloak",
+  'Rising Thunder',
 
   // Frostdraw
   "Ice Spikes",
@@ -207,18 +208,18 @@ const mantra = [
 ];
 mantra.forEach(function(mantra) {
   if (itemName === mantra) {
-    infoText = `Это мантра ${mantra}`;
+    infoText = `This is the mantra ${mantra}`;
   }
 });
 
   document.getElementById(
     "infoText"
-  ).innerHTML = `<p>${infoText}. Выберите направление.</p>`;
+  ).innerHTML = `<p>${infoText}. select information.</p>`;
 }
 
 function caseAction(type) {
 if (currentSelection === "") {
-    document.getElementById('infoText').innerHTML = "<p>Сначала выберите элемент.</p>";
+    document.getElementById('infoText').innerHTML = "<p>First select an element.</p>";
     return;
 }
 
@@ -248,13 +249,15 @@ let infoText = '';
         } else if (type === 'leveling') {
             infoText = `
             <h1>Fire Blade leveling</h1>
-            <p>на 5 уровне прокачки тру блок брейк</p>
+            <p>Increases posture dmg by (PLACEHOLDER) per level
+</p>
         `;
         } else if (type === 'effect') {
             infoText = `
             <h1>Fire Blade modeffect</h1>
             <p>aeon and eternal logstones ???</p>
-            <p>vibrant gems: увелчивают интенсивность пламени</p>
+            <p>Vibrant Gems: Makes it break more environment
+</p>
         
         `;
         }
@@ -281,13 +284,16 @@ let infoText = '';
         } else if (type === 'leveling') {
             infoText = `
                 <h1>Burning Servants Leveling</h1>
-                <p>У этой мантры нет левелинг эффектов</p>
+                <p>This mantra has no leveling effect.
+</p>
             `;
         } else if (type === 'effect') {
             infoText = `
                 <h1>Burning Servants Effect</h1>
-                <p>Cloud Stones/Stratus Stones: делает размер больше</p>
-                <p>Drift Shard/Rush Shard: делает мантру быстрее</p>
+                <p>Cloud and Stratus Stones: Makes the servent radius larger
+</p>
+                <p>Drift and Rush Shards: Makes the mantra faster
+</p>
             `;
         }
     } else if (currentSelection === 'Flame Grab') {
@@ -312,12 +318,14 @@ let infoText = '';
         } else if (type === 'leveling') {
             infoText = `
                 <h1>Flame Grab Leveling</h1>
-                <p>У этой мантры нет левелинг эффектов</p>
+                <p>This mantra has no leveling effect.
+</p>
             `;
         } else if (type === 'effect') {
             infoText = `
                 <h1>Flame Grab Effect</h1>
-                <p>Crystal and Perfect Lens: делает мантру длиннее</p>
+                <p>Crystal and Perfect Lens: makes the mantra longer
+</p>
             `;
         }
     } else if (currentSelection === 'Flame Repulsion') {
@@ -342,15 +350,17 @@ let infoText = '';
         } else if (type === 'leveling') {
             infoText = `
                 <h1>Flame Repulsion Leveling</h1>
-                <p>У этой мантры нет левелинг эффектов</p>
+                <p>This mantra has no leveling effect.
+</p>
             `;
         } else if (type === 'effect') {
             infoText = `
                 <h1>Flame Repulsion Effect</h1>
-                <p>Cloud and Stratus Stones: делает размер больше</p>
+                <p>Cloud and Stratus Stones: Makes the repulsion larger
+</p>
             `;
         }
-    } else if (currentSelection === 'Fire Gun') {
+    } else if (currentSelection === 'Fire gun') {
         if (type === 'mod') {
             infoText = `
                 <h1>Fire Gun Modification</h1>
@@ -373,12 +383,14 @@ let infoText = '';
         } else if (type === 'leveling') {
             infoText = `
                 <h1>Fire Gun Leveling</h1>
-                <p>У этой мантры нет левелинг эффектов</p>
+                <p>This mantra has no leveling effect.
+</p>
             `;
         } else if (type === 'effect') {
             infoText = `
                 <h1>Fire Gun Effect</h1>
-                <p>Drift and Rush Shards: делает пули дальше и быстрее</p>
+                <p>Drift and Rush Shards: Makes bullets go farther and faster
+</p>
             `;
         }
     } else if (currentSelection === 'Flame of Denial') {
@@ -403,51 +415,22 @@ let infoText = '';
         } else if (type === 'leveling') {
             infoText = `
                 <h1>Flame of Denial Leveling</h1>
-                <p> увеличивает восстоновление здровья за уровень</p>
+                <p> Increases heal amount per proc per level
+</p>
             `;
         } else if (type === 'effect') {
             infoText = `
                 <h1>Flame of Denial Effect</h1>
-                <p>Vibrant Gem: делает разрушение окружения больше</p>
+                <p>Vibrant Gem: ??</p>
             `;
         }
     }  else if (currentSelection === 'Flame Blind') {
         if (type === 'mod') {
             infoText = `
                 <h1>Flame Blind Modification</h1>
-                <p>Cloud Stone/Stratus Stone ❌</p>
-                <p>Drift Shard/Rush Shard ❌</p>
-                <p>Aeon Logstone/Eternal Logstone ❌</p>
-                <p>Crystal Lens/Perfect Lens ✅</p>
-                <p>Glass Stone/Magnifying Stone ❌</p>
-                <p>Vibrant Gem ❌</p>
-                <p>Round spark❌</p>
-          
-            <p>Spring Spark❌</p>
-            <p>Magnet Spark❌</p>
-            <p>Tornado Spark❌</p>
-            <p>Multiplying Spark❌</p>
-            <p>Reversal Spark❌</p>
-            <p>Blast Spark❌</p>
-            `;
-        } else if (type === 'leveling') {
-            infoText = `
-                <h1>Flame Blind Leveling</h1>
-                <p>У этой мантры нет левелинг эффектов</p>
-            `;
-        } else if (type === 'effect') {
-            infoText = `
-                <h1>Flame Blind Effect</h1>
-                <p>Crystal and Perfect Lens: увеличивает радиус эффекта</p>
-            `;
-        }
-    } else if (currentSelection === 'Fire Palm') {
-        if (type === 'mod') {
-            infoText = `
-                <h1>Fire Palm Modification</h1>
                 <p>Cloud Stone/Stratus Stone ✅</p>
                 <p>Drift Shard/Rush Shard ❌</p>
-                <p>Aeon Logstone/Eternal Logstone ❌</p>
+                <p>Aeon Logstone/Eternal Logstone ✅</p>
                 <p>Crystal Lens/Perfect Lens ❌</p>
                 <p>Glass Stone/Magnifying Stone ❌</p>
                 <p>Vibrant Gem ❌</p>
@@ -462,13 +445,49 @@ let infoText = '';
             `;
         } else if (type === 'leveling') {
             infoText = `
+                <h1>Flame Blind Leveling</h1>
+                <p>This mantra has no leveling effect.
+</p>
+            `;
+        } else if (type === 'effect') {
+            infoText = `
+                <h1>Flame Blind Effect</h1>
+                <p>Cloud and Stratus Stones: ?
+</p>
+            `;
+        }
+    } else if (currentSelection === 'Fire Palm') {
+        if (type === 'mod') {
+            infoText = `
+                <h1>Fire Palm Modification</h1>
+                <p>Cloud Stone/Stratus Stone ✅</p>
+                <p>Drift Shard/Rush Shard ❌</p>
+                <p>Aeon Logstone/Eternal Logstone ❌</p>
+                <p>Crystal Lens/Perfect Lens ❌</p>
+                <p>Glass Stone/Magnifying Stone ❌</p>
+                <p>Vibrant Gem ✅</p>
+                <p>Round spark❌</p>
+          
+            <p>Spring Spark❌</p>
+            <p>Magnet Spark❌</p>
+            <p>Tornado Spark❌</p>
+            <p>Multiplying Spark❌</p>
+            <p>Reversal Spark❌</p>
+            <p>Blast Spark❌</p>
+            `;
+        } else if (type === 'leveling') {
+            infoText = `
                 <h1>Fire Palm Leveling</h1>
-                <p>У этой мантры нет левелинг эффектов</p>
+                <p>This mantra has no leveling effect.
+</p>
             `;
         } else if (type === 'effect') {
             infoText = `
                 <h1>Fire Palm Effect</h1>
-                <p>Cloud and Stratus Stones: делает огненную волну больше</p>
+                <p>Cloud and Stratus Stones: Makes the 'fire wave' larger
+</p> 
+<p>Vibrant Gems: Makes it break more environment</p>
+
             `;
         }
     } else if (currentSelection === 'Fire Eruption') {
@@ -493,12 +512,14 @@ let infoText = '';
         } else if (type === 'leveling') {
             infoText = `
                 <h1>Fire Eruption Leveling</h1>
-                <p>У этой мантры нет левелинг эффектов</p>
+                <p>This mantra has no leveling effect.
+</p>
             `;
         } else if (type === 'effect') {
             infoText = `
                 <h1>Fire Eruption Effect</h1>
-                <p>Glass and Magnifying Stones: делает эрупцию больше</p>
+                <p>Glass and Magnifying Stones: Makes the 'eruption' larger
+</p>
             `;
         }
     } else if (currentSelection === 'Fire Forge') {
@@ -509,7 +530,7 @@ let infoText = '';
                 <p>Drift Shard/Rush Shard ❌</p>
                 <p>Aeon Logstone/Eternal Logstone ✅</p>
                 <p>Crystal Lens/Perfect Lens ✅</p>
-                <p>Glass Stone/Magnifying Stone ❌</p>
+                <p>Glass Stone/Magnifying Stone ✅</p>
                 <p>Vibrant Gem ❌</p>
                 <p>Round spark❌</p>
           
@@ -525,13 +546,16 @@ let infoText = '';
         } else if (type === 'leveling') {
             infoText = `
                 <h1>Fire Forge Leveling</h1>
-                <p>У этой мантры нет левелинг эффектов</p>
+                <p>This mantra has no leveling effect.
+</p>
             `;
         } else if (type === 'effect') {
             infoText = `
                 <h1>Fire Forge Effect</h1>
-                <p>Aeon and Eternal Logstones: делает кинжалы быстрее</p>
-                <p>Crystal and Perfect Lens: делает кинжалы быстрее</p>
+                <p>Aeon and Eternal Logstones: ?
+</p>
+                <p>Crystal and Perfect Lens: Makes the daggers go faster
+</p>
             `;
         }
     } else if (currentSelection === 'Graceful Flame') {
@@ -543,7 +567,7 @@ let infoText = '';
                 <p>Aeon Logstone/Eternal Logstone ✅</p>
                 <p>Crystal Lens/Perfect Lens ❌</p>
                 <p>Glass Stone/Magnifying Stone ❌</p>
-                <p>Vibrant Gem ❌</p>
+                <p>Vibrant Gem ✅</p>
                  <p>Round spark❌</p>
           
             <p>Spring Spark❌</p>
@@ -558,13 +582,16 @@ let infoText = '';
         } else if (type === 'leveling') {
             infoText = `
                 <h1>Graceful Flame Leveling</h1>
-                <p>У этой мантры нет левелинг эффектов</p>
+                <p>This mantra has no leveling effect.
+</p>
             `;
         } else if (type === 'effect') {
             infoText = `
                 <h1>Graceful Flame Effect</h1>
-                <p>Cloud and Stratus Stones: делает огонь больше</p>
-                <p>Aeon and Eternal Logstones: делает больше ритуальных ключей для ритуального каста</p>
+                <p>Aeon and Eternal Logstones: Makes the 'Graceful Flames' last longer, but adds more ritual keys to the ritual cast
+</p>
+                <p>Vibrant Gems: Makes the 'passive healing' effect on the graceful flame better
+</p>
             `;
         }
 } else if (currentSelection === 'Flame Sentinel') {
@@ -576,7 +603,7 @@ let infoText = '';
             <p>Aeon Logstone/Eternal Logstone ❌</p>
             <p>Crystal Lens/Perfect Lens ✅</p>
             <p>Glass Stone/Magnifying Stone ✅</p>
-            <p>Vibrant Gem ❌</p>
+            <p>Vibrant Gem ✅</p>
             <p>Round spark❌</p>
           
             <p>Spring Spark❌</p>
@@ -593,13 +620,17 @@ let infoText = '';
     } else if (type === 'leveling') {
         infoText = `
             <h1>Flame Sentinel Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>
+            <p>This mantra has no leveling effect.
+</p>
         `;
     } else if (type === 'effect') {
         infoText = `
             <h1>Flame Sentinel Effect</h1>
-            <p>Crystal and Perfect Lens: делает кинжалы быстрее</p>
-            <p>Glass and Magnifying Stones: делает кинжалы быстрее</p>
+            <p>Crystal and Perfect Lens: ?
+</p>
+            <p>Magnet Spark: The orb now follows you
+
+</p>
         `;
     }
 } else if (currentSelection === 'Flame Wisp') {
@@ -610,8 +641,8 @@ let infoText = '';
             <p>Drift Shard/Rush Shard ❌</p>
             <p>Aeon Logstone/Eternal Logstone ✅</p>
             <p>Crystal Lens/Perfect Lens ❌</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>
-            <p>Vibrant Gem ✅</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
+            <p>Vibrant Gem ❌</p>
             <p>Round spark❌</p>
           
             <p>Spring Spark❌</p>
@@ -624,14 +655,15 @@ let infoText = '';
     } else if (type === 'leveling') {
         infoText = `
             <h1>Flame Wisp Leveling</h1>
-            <p>У увеличивает восстоновление здровья за уровень</p>
+            <p>Increases healing given by flame wisp by (PLACEHOLDER) per level
+</p>
         `;
     } else if (type === 'effect') {
         infoText = `
             <h1>Flame Wisp Effect</h1>
-            <p>Aeon and Eternal Logstones: делает длительность дольше</p>
-            <p>Glass and Magnifying Stones: делает огонь больше</p>
-            <p>Vibrant Gems: делает огонь больше</p>
+            <p>Aeon and Eternal Logstones: Makes the wisp last longer, but adds more ritual keys to the ritual cast
+</p>
+            
         `;
     }
 } else if (currentSelection === 'Flame Leap') {
@@ -658,12 +690,14 @@ let infoText = '';
     } else if (type === 'leveling') {
         infoText = `
             <h1>Flame Leap Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>
+            <p>This mantra has no leveling effect.
+</p>
         `;
     } else if (type === 'effect') {
         infoText = `
             <h1>Flame Leap Effect</h1>
-            <p>Glass and Magnifying Stones: делает взлет больше</p>
+            <p>Reversal Spark: Removes most of the vertical movement of flame leap, instead, you will now do a flip forwards before slamming back down, the slam will send anyone hit into the sky
+</p>
         `;
     }
 } else if (currentSelection === 'Flare Volley') {
@@ -689,13 +723,14 @@ let infoText = '';
     } else if (type === 'leveling') {
         infoText = `
             <h1>Flare Volley Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>
+            <p>This mantra has no leveling effect.
+</p>
         `;
     } else if (type === 'effect') {
         infoText = `
             <h1>Flare Volley Effect</h1>
-            <p>Cloud and Stratus Stones: делает волей больше</p>
-            <p>Drift and Rush Shards: делает волей быстрее</p>
+            <p>Cloud and Stratus Stones: ?</p>
+            <p>Drift and Rush Shards: ?</p>
         `;
     }
 } else if (currentSelection === 'Flame Assault') {
@@ -720,13 +755,16 @@ let infoText = '';
     } else if (type === 'leveling') {
         infoText = `
             <h1>Flame Assault Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>
+            <p>This mantra has no leveling effect.
+</p>
         `;
     } else if (type === 'effect') {
         infoText = `
             <h1>Flame Assault Effect</h1>
-            <p>Crystal and Perfect Lens: делает ассалт быстрее</p>
-            <p>Glass and Magnifying Stones: делает ассалт быстрее</p>
+            <p>Crystal and Perfect Lens: Makes the Fire Assault go further
+</p>
+            <p>Glass and Magnifying Stones: Makes the hitbox of Fire Assault larger and possibly makes it go further but needs testing
+</p>
         `;
     }
 } else if (currentSelection === 'Rising Flame') {
@@ -751,12 +789,14 @@ let infoText = '';
     } else if (type === 'leveling') {
         infoText = `
             <h1>Rising Flame Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>
+            <p>This mantra has no leveling effect.
+</p>
         `;
     } else if (type === 'effect') {
         infoText = `
             <h1>Rising Flame Effect</h1>
-            <p>Cloud and Stratus Stones: делает эффект длиннее</p>
+            <p>Cloud and Stratus Stones: Makes the hitbox of Rising Flame larger
+</p>
         `;
     }
 } else if (currentSelection === 'Relentless Flames') {
@@ -781,7 +821,8 @@ let infoText = '';
     } else if (type === 'leveling') {
         infoText = `
             <h1>Relentless Flames★★ Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>
+            <p>This mantra has no leveling effect.
+</p>
         `;
     } else if (type === 'effect') {
         infoText = `
@@ -812,12 +853,14 @@ let infoText = '';
     } else if (type === 'leveling') {
         infoText = `
             <h1>Ash Slam Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>
+            <p>This mantra has no leveling effect.
+</p>
         `;
     } else if (type === 'effect') { 
         infoText = `
             <h1>Ash Slam Effect</h1>
-            <p>crystal leens/perfect leens: делает хитбокс больше</p>
+            <p>Crystal and Perfect Lens: Makes the hitbox bigger
+</p>
             <p>vibrant gems: ???</p>
         `;
     }
@@ -851,13 +894,18 @@ else if (currentSelection === 'Flame Ballista') {
     } else if (type === 'leveling') {
         infoText = `
             <h1>Flame BallistaLeveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>
+            <p>This mantra has no leveling effect.
+</p>
         `;
     } else if (type === 'effect') { 
         infoText = `
             <h1>Flame Ballista Effect</h1>
-            <p>crystal leens/perfect leens: увеличивает дальность/скорость</p>
-            <p>Glass and Magnifying Stones:  увеличивают «извержение»</p>
+            <p>Crystal and Perfect Lens: Increases range/speed
+</p>
+            <p>Glass and Magnifying Stones: Makes the 'eruption' larger
+</p>
+<p>Spring Spark: Fly in the air while charging the ballista.</p>
+
         `;
     }
 }
@@ -884,7 +932,8 @@ else if (currentSelection === 'Flaming Scourge') {
     } else if (type === 'leveling') {
         infoText = `
             <h1>Flaming Scourge Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>
+            <p>This mantra has no leveling effect.
+</p>
         `;
     } else if (type === 'effect') { 
         infoText = `
@@ -898,12 +947,12 @@ else if (currentSelection === 'Lightning Blade') {
     if (type === 'mod') {
         infoText = 
             `<h1>Lightning Blade Modification</h1>
-            <p>Cloud Stone/Stratus Stone ❌</p>
+            <p>Cloud Stone/Stratus Stone ✅</p>
             <p>Drift Shard/Rush Shard ❌</p>
             <p>Aeon Logstone/Eternal Logstone ✅</p>
-            <p>Crystal Lens/Perfect Lens ✅</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>
-            <p>Vibrant Gem ✅</p>
+            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
+            <p>Vibrant Gem ❌</p>
             <p>Round spark❌</p>
             <p>Spring Spark❌</p>
             <p>Magnet Spark✅</p>
@@ -916,7 +965,8 @@ else if (currentSelection === 'Lightning Blade') {
     } else if (type === 'leveling') {
         infoText = 
            ` <h1>Lightning Blade Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -924,7 +974,7 @@ else if (currentSelection === 'Lightning Blade') {
             <p>Cloud and Stratus Stones: Increases the hitbox of the blades</p>
             <p>Aeon and Eternal Logstones: Increases the length of the applied 'shock' effect</p>
             <p>Magnet Spark: Makes you do a third slash after the initial two slashes</p>
-            <p>Vibrant Gem: ?</p>`
+            `
         ;
     }
 }
@@ -935,8 +985,8 @@ else if (currentSelection === 'Jolt Grab') {
             `<h1>Jolt Grab Modification</h1>
             <p>Cloud Stone/Stratus Stone ❌</p>
             <p>Drift Shard/Rush Shard ❌</p>
-            <p>Aeon Logstone/Eternal Logstone ✅</p>
-            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Aeon Logstone/Eternal Logstone ❌</p>
+            <p>Crystal Lens/Perfect Lens  ✅</p>
             <p>Glass Stone/Magnifying Stone ❌</p>
             <p>Vibrant Gem ✅</p>
             <p>Round spark❌</p>
@@ -950,13 +1000,16 @@ else if (currentSelection === 'Jolt Grab') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Jolt Grab Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Jolt Grab Effect</h1>
             <p>Magnet Spark: Makes you teleport to the opponent, removes the horizontal movement, and the teleport does AOE damage</p>
-            <p>Vibrant Gem: ?</p>`
+            <p>Vibrant Gem: ?</p>
+            <p>Crystal and Perfect Lens: Makes you go further with jolt grab</p>
+`
         ;
     }
 }
@@ -966,12 +1019,12 @@ else if (currentSelection === 'Lightning Beam') {
     if (type === 'mod') {
         infoText = 
             `<h1>Lightning Beam Modification</h1>
-            <p>Cloud Stone/Stratus Stone ❌</p>
+            <p>Cloud Stone/Stratus Stone ✅</p>
             <p>Drift Shard/Rush Shard ❌</p>
-            <p>Aeon Logstone/Eternal Logstone ❌</p>
-            <p>Crystal Lens/Perfect Lens ✅</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>
-            <p>Vibrant Gem ✅</p>
+            <p>Aeon Logstone/Eternal Logstone ✅</p>
+            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
+            <p>Vibrant Gem ❌</p>
             <p>Round spark❌</p>
             <p>Spring Spark❌</p>
             <p>Magnet Spark❌</p>
@@ -983,14 +1036,14 @@ else if (currentSelection === 'Lightning Beam') {
     } else if (type === 'leveling') {
         infoText = 
           ` <h1>Lightning Beam Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
            ` <h1>Lightning Beam Effect</h1>
-            <p>Crystal and Perfect Lens: Increases the range and speed of the beam</p>
-            <p>Glass and Magnifying Stones: Increases the range</p>
-            <p>Vibrant Gem: ?</p>`
+            <p>??</p>
+          `
         ;
     }
 }
@@ -999,10 +1052,10 @@ else if (currentSelection === 'Lightning Strike') {
     if (type === 'mod') {
         infoText = 
             `<h1>Lightning Strike Modification</h1>
-            <p>Cloud Stone/Stratus Stone ❌</p>
+            <p>Cloud Stone/Stratus Stone ✅</p>
             <p>Drift Shard/Rush Shard ✅</p>
             <p>Aeon Logstone/Eternal Logstone ✅</p>
-            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Crystal Lens/Perfect Lens ✅</p>
             <p>Glass Stone/Magnifying Stone ❌</p>
             <p>Vibrant Gem ✅</p>
             <p>Round spark❌</p>
@@ -1016,14 +1069,20 @@ else if (currentSelection === 'Lightning Strike') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Lightning Strike Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Lightning Strike Effect</h1>
-            <p>Drift and Rush Shards: Appears to have no effect</p>
-            <p>Aeon and Eternal Logstones: Increases the number of strikes but lowers the damage (reaches a point where the damage is basically nothing)</p>
-            <p>Vibrant Gem: ?</p>`
+            <p>Cloud and Stratus Stones: Slightly increases the hitbox of the strikes
+</p>
+            <p>Drift and Rush Shards: Appears to have no effect
+</p>
+            <p>Aeon and Eternal Logstones: Increases the number of strikes but lowers the damage (reaches a point where the damage is basically nothing)
+</p>
+<p>Crystal and Perfect Lenses: Increases the range of the strikes </p>
+`
         ;
     }
 }
@@ -1034,30 +1093,34 @@ else if (currentSelection === 'Lightning Stream') {
         infoText = 
             `<h1>Lightning Stream Modification</h1>
             <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ✅</p>
-            <p>Aeon Logstone/Eternal Logstone ✅</p>
+            <p>Drift Shard/Rush Shard ❌</p>
+            <p>Aeon Logstone/Eternal Logstone ❌</p>
             <p>Crystal Lens/Perfect Lens ✅</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
             <p>Vibrant Gem ✅</p>
             <p>Round spark❌</p>
             <p>Spring Spark❌</p>
             <p>Magnet Spark❌</p>
             <p>Tornado Spark❌</p>
             <p>Multiplying Spark❌</p>
-            <p>Reversal Spark❌</p>
+            <p>Reversal Spark✅</p>
             <p>Blast Spark✅</p>`
         ;
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Lightning Stream Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Lightning Stream Effect</h1>
-            <p>Cloud and Perfect Lens: Increases the range of the strikes</p>
-            <p>Glass and Magnifying Stones: Increases the range</p>
-            <p>Blast Spark: Removes the pulling effect of Lightning Stream and replaces it so the Lightning Stream now does a bit of damage, along with applying shock onto the opponent</p>
+            <p>Crystal and Perfect Lens: Increases range and speed of the stream
+</p>
+            <p>Reversal Spark: Pulls you towards your opponent instead
+</p>
+            <p>Blast Spark: Removes the pulling effect of Lightning Stream and replaces it so the Lightning Stream now does a bit of damage, along with applying shock onto the opponent
+</p>
             <p>Vibrant Gem: ?</p>`
         ;
     }
@@ -1068,10 +1131,10 @@ else if (currentSelection === 'Lightning Impact') {
         infoText = 
             `<h1>Lightning Impact Modification</h1>
             <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ✅</p>
-            <p>Aeon Logstone/Eternal Logstone ✅</p>
-            <p>Crystal Lens/Perfect Lens ❌</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>
+            <p>Drift Shard/Rush Shard ❌</p>
+            <p>Aeon Logstone/Eternal Logstone ❌</p>
+            <p>Crystal Lens/Perfect Lens ✅</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
             <p>Vibrant Gem ✅</p>
             <p>Round spark❌</p>
             <p>Spring Spark❌</p>
@@ -1084,14 +1147,16 @@ else if (currentSelection === 'Lightning Impact') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Lightning Impact Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Lightning Impact Effect</h1>
-            <p>Aeon and Eternal Logstones: Increases the number of strikes but lowers the damage (reaches a point where the damage is basically nothing)</p>
+            <p>Crystal and Perfect Lens: ?
+</p>
             <p>Reversal Spark: Teleport behind your target when striking down, however it increases wind-up. Moves you forward slightly upon missing the mantra.</p>
-            <p>Glass and Magnifying Stones: Increases the range and speed of the beam</p>
+            
             <p>Vibrant Gem: ?</p>`
         ;
     }
@@ -1102,11 +1167,11 @@ else if (currentSelection === 'Lightning Clones') {
         infoText = 
             `<h1>Lightning Clones Modification</h1>
             <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ✅</p>
+            <p>Drift Shard/Rush Shard ❌</p>
             <p>Aeon Logstone/Eternal Logstone ✅</p>
-            <p>Crystal Lens/Perfect Lens ✅</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>
-            <p>Vibrant Gem ✅</p>
+            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
+            <p>Vibrant Gem ❌</p>
             <p>Round spark❌</p>
             <p>Spring Spark❌</p>
             <p>Magnet Spark❌</p>
@@ -1118,12 +1183,14 @@ else if (currentSelection === 'Lightning Clones') {
     } else if (type === 'leveling') {
         infoText = 
            ` <h1>Lightning Clones Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Lightning Clones Effect</h1>
-            <p>Cloud and Perfect Lens: Increases the number of clones</p>
+            <p>Aeon and Eternal Logstones: Makes the clones last longer (they still disappear when hitting someone)
+</p>
             <p>Multiplying Spark: Causes two clones to spawn instead of one</p>
             <p>Blast Spark: Makes the clones create a small AOE explosion when they disappear/die</p>
             <p>Glass and Magnifying Stones: Increases the duration of the clones</p>
@@ -1136,31 +1203,33 @@ else if (currentSelection === 'Electro Carve') {
     if (type === 'mod') {
         infoText = 
             `<h1>Electro Carve Modification</h1>
-            <p>Cloud Stone/Stratus Stone ❌</p>
+            <p>Cloud Stone/Stratus Stone ✅</p>
             <p>Drift Shard/Rush Shard ❌</p>
-            <p>Aeon Logstone/Eternal Logstone ✅</p>
+            <p>Aeon Logstone/Eternal Logstone ❌</p>
             <p>Crystal Lens/Perfect Lens ✅</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
             <p>Vibrant Gem ✅</p>
             <p>Round spark❌</p>
             <p>Spring Spark❌</p>
-            <p>Magnet Spark❌</p>
+            <p>Magnet Spark✅</p>
             <p>Tornado Spark❌</p>
-            <p>Multiplying Spark✅</p>
+            <p>Multiplying Spark❌</p>
             <p>Reversal Spark❌</p>
             <p>Blast Spark✅</p>`
         ;
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Electro Carve Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Electro Carve Effect</h1>
-            <p>Cloud and Stratus Stones: Increases the range of the carve</p>
+            <p>Cloud and Stratus Stones: Makes the hitbox of the 'electric sphere' larger
+</p>
             <p>Crystal and Perfect Lens: Increases the range and speed of the carve</p>
-            <p>Glass and Magnifying Stones: Increases the range</p>
+           
             <p>Magnet Spark: Throws a javelin that, after a certain amount of time, makes a field that shocks everyone around the victim.*</p>
             <p>Blast Spark: Makes you slam the ground which creates a shocking field.*</p>
             <p>*Note, neither work with eachother (it just applies the first one you put on)</p>
@@ -1175,10 +1244,10 @@ else if (currentSelection === 'Thunder Kick') {
             `<h1>Thunder Kick Modification</h1>
             <p>Cloud Stone/Stratus Stone ❌</p>
             <p>Drift Shard/Rush Shard ❌</p>
-            <p>Aeon Logstone/Eternal Logstone ✅</p>
-            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Aeon Logstone/Eternal Logstone ❌</p>
+            <p>Crystal Lens/Perfect Lens ✅</p>
             <p>Glass Stone/Magnifying Stone ❌</p>
-            <p>Vibrant Gem ❌</p>
+            <p>Vibrant Gem ✅</p>
             <p>Round spark❌</p>
             <p>Spring Spark❌</p>
             <p>Magnet Spark❌</p>
@@ -1196,8 +1265,9 @@ else if (currentSelection === 'Thunder Kick') {
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Thunder Kick Effect</h1>
-            <p>Cloud and Perfect Lens: Moves you in the direction of the kick</p>
-            <p>Aeon and Eternal Logstones: Makes the kick stronger</p>`
+            <p>Crystal and Perfect Lens: Moves you in the direction of the kick
+</p>
+          `
         ;
     }
 }
@@ -1206,43 +1276,10 @@ else if (currentSelection === 'Bolt Piercer') {
     if (type === 'mod') {
         infoText = 
             `<h1>Bolt Piercer Modification</h1>
-            <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ❌</p>
+            <p>Cloud Stone/Stratus Stone ✅</p>
+            <p>Drift Shard/Rush Shard ✅</p>
             <p>Aeon Logstone/Eternal Logstone ✅</p>
-            <p>Crystal Lens/Perfect Lens ❌</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>
-            <p>Vibrant Gem ❌</p>
-            <p>Round spark❌</p>
-            <p>Spring Spark❌</p>
-            <p>Magnet Spark❌</p>
-            <p>Tornado Spark❌</p>
-            <p>Multiplying Spark❌</p>
-            <p>Reversal Spark❌</p>
-            <p>Blast Spark❌</p>`
-        ;
-    } else if (type === 'leveling') {
-        infoText = 
-            `<h1>Bolt Piercer Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
-        ;
-    } else if (type === 'effect') { 
-        infoText = 
-            `<h1>Bolt Piercer Effect</h1>
-            <p>Multiplying sparks: Allows you to shoot bolts instead of arrows</p>
-            <p>Aeon and Eternal Logstones: Turns the bolt into a high-speed projectile</p>
-            <p>Glass and Magnifying Stones: Increases the range of the bolts</p>`
-        ;
-    }
-}
-
-else if (currentSelection === 'Grand Javelin') {
-    if (type === 'mod') {
-        infoText = 
-            `<h1>Grand Javelin Modification</h1>
-            <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ❌</p>
-            <p>Aeon Logstone/Eternal Logstone ✅</p>
-            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Crystal Lens/Perfect Lens ✅</p>
             <p>Glass Stone/Magnifying Stone ❌</p>
             <p>Vibrant Gem ✅</p>
             <p>Round spark❌</p>
@@ -1255,6 +1292,40 @@ else if (currentSelection === 'Grand Javelin') {
         ;
     } else if (type === 'leveling') {
         infoText = 
+            `<h1>Bolt Piercer Leveling</h1>
+            <p>This mantra has no leveling effect.
+</p>`
+        ;
+    } else if (type === 'effect') { 
+        infoText = 
+            `<h1>Bolt Piercer Effect</h1>
+            <p>Crystal and Perfect Lenses: Gives your piercer more range
+</p>
+            `
+        ;
+    }
+}
+
+else if (currentSelection === 'Grand Javelin') {
+    if (type === 'mod') {
+        infoText = 
+            `<h1>Grand Javelin Modification</h1>
+            <p>Cloud Stone/Stratus Stone ❌</p>
+            <p>Drift Shard/Rush Shard ❌</p>
+            <p>Aeon Logstone/Eternal Logstone ❌</p>
+            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
+            <p>Vibrant Gem ❌</p>
+            <p>Round spark❌</p>
+            <p>Spring Spark❌</p>
+            <p>Magnet Spark❌</p>
+            <p>Tornado Spark❌</p>
+            <p>Multiplying Spark✅</p>
+            <p>Reversal Spark❌</p>
+            <p>Blast Spark❌</p>`
+        ;
+    } else if (type === 'leveling') {
+        infoText = 
             `<h1>Grand Javelin Leveling</h1>
             <p>Increases damage by (PLACEHOLDER) per level
 </p>`
@@ -1262,9 +1333,9 @@ else if (currentSelection === 'Grand Javelin') {
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Grand Javelin Effect</h1>
-            <p>Cloud and Stratus Stones: Increases the range of the javelin</p>
+            
             <p>Multiplying Spark: Turns the javelin into a triple shot javelin that shoots in a triangle formation in front of you</p>
-            <p>Vibrant Gem: Increases the speed and damage of the javelin</p>`
+            `
         ;
     }
 }
@@ -1278,9 +1349,9 @@ else if (currentSelection === 'Thunder Wisp') {
             <p>Cloud Stone/Stratus Stone ❌</p>
             <p>Drift Shard/Rush Shard ❌</p>
             <p>Aeon Logstone/Eternal Logstone ✅</p>
-            <p>Crystal Lens/Perfect Lens ✅</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>
-            <p>Vibrant Gem ✅</p>
+            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
+            <p>Vibrant Gem ❌</p>
             <p>Round spark❌</p>
           <p>Spring Spark❌</p>
           <p>Magnet Spark❌</p>
@@ -1292,14 +1363,15 @@ else if (currentSelection === 'Thunder Wisp') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Thunder Wisp Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Thunder Wisp Effect</h1>
-            <p>Aeon and Eternal Logstones: Increases the range of the wisp</p>
-            <p>Crystal and Perfect Lens: Increases the range of the wisp</p>
-            <p>Vibrant Gem: Increases the damage of the wisp</p>`
+            <p>Aeon and Eternal Logstones: Makes the wisp last longer but adds more ritual keys to the ritual cast
+</p>
+            `
         ;
     }
 }
@@ -1308,11 +1380,11 @@ else if (currentSelection === 'Storm Blades') {
     if (type === 'mod') {
         infoText = 
             `<h1>Storm Blades Modification</h1>
-            <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ✅</p>
-            <p>Aeon Logstone/Eternal Logstone ✅</p>
+            <p>Cloud Stone/Stratus Stone ✅</p>
+            <p>Drift Shard/Rush Shard ❌</p>
+            <p>Aeon Logstone/Eternal Logstone ❌</p>
             <p>Crystal Lens/Perfect Lens ❌</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
             <p>Vibrant Gem ✅</p>
             <p>Round spark❌</p>
           <p>Spring Spark❌</p>
@@ -1325,24 +1397,25 @@ else if (currentSelection === 'Storm Blades') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Storm Blades Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Storm Blades Effect</h1>
-            <p>Aeon and Eternal Logstones: Increases the number of blades</p>
+            <p>Cloud and Stratus Stones: Increases size of AOE (default)
+</p>
             <p>Tornado Spark: Changes the mantra to the 'Storm Cage', it creates a somewhat large circle around the user and prevents anyone else from leaving the circle, shocking them and pulling back in if they do. This disables other modifications, however.</p>
-            <p>Glass and Magnifying Stones: Increases the range of the blades</p>
-            <p>Vibrant Gem: Increases the damage of the blades</p>`
+            `
         ;
     }
 }
-else if (currentSelection === 'Fleeting sparkss') {
+else if (currentSelection === 'Fleeting Sparks') {
     if (type === 'mod') {
         infoText = 
             `<h1>Fleeting sparks Modification</h1>
             <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ✅</p>
+            <p>Drift Shard/Rush Shard ❌</p>
             <p>Aeon Logstone/Eternal Logstone ❌</p>
             <p>Crystal Lens/Perfect Lens ✅</p>
             <p>Glass Stone/Magnifying Stone ✅</p>
@@ -1358,18 +1431,21 @@ else if (currentSelection === 'Fleeting sparkss') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Fleeting sparks Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Fleeting sparks Effect</h1>
-            <p>Cloud and Stratus Stones: Increases the range and speed of the attack</p>
+            <p>Crystal and Perfect Lenses: Increases the range the orbs will lock onto someone
+</p>
             <p>Magnet Spark info Doubles the orb amount, orb damage is split between all</p>
             <p>Multiplying Spark info Removes laser function, the orbs now ignore all obstacles defending the target</p>
             <p>Multiplying + Magnet Spark: Both effects are present, orbs ignore all obstacles defending the target</p>
-            <p>Crystal and Perfect Lens: Increases the range of the strikes</p>
-            <p>Glass and Magnifying Stones: Increases the range</p>
-            <p>Vibrant Gem: ?</p>`
+            
+            <p>Glass and Magnifying Stones: Increases impact explosion size
+</p>
+        `
         ;
     }
 }
@@ -1394,7 +1470,8 @@ else if (currentSelection === 'Lightning Assault') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Lightning Assault Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -1425,7 +1502,8 @@ else if (currentSelection === 'Lightning Cloak') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Lightning Cloak Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -1455,7 +1533,8 @@ else if (currentSelection === 'sparks Swap') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>sparks Swap Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -1487,7 +1566,8 @@ else if (currentSelection === 'Emotion Wave') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Emotion Wave Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -1497,18 +1577,49 @@ else if (currentSelection === 'Emotion Wave') {
             <p>Vibrant Gems: ?</p>`
         ;
     }
+} 
+
+else if (currentSelection === 'Rising Thunder') {
+    if (type === 'mod') {
+        infoText = 
+            `<h1>Rising Thunder Modification</h1>
+            <p>Cloud Stone/Stratus Stone ❌</p>
+            <p>Drift Shard/Rush Shard ❌ </p>
+            <p>Aeon Logstone/Eternal Logstone ❌</p>
+            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
+            <p>Vibrant Gem ✅</p>
+            <p>Round spark❌</p>
+          <p>Spring Spark❌</p>
+          <p>Magnet Spark❌</p>
+          <p>Tornado Spark❌</p>
+          <p>Multiplying Spark❌</p>
+          <p>Reversal Spark❌</p>
+          <p>Blast Spark❌</p>`
+        ;
+    } else if (type === 'leveling') {
+        infoText = 
+            `<h1>Rising Thunder Leveling</h1>
+            <p>This mantra has no leveling effect.
+</p>`
+        ;
+    } else if (type === 'effect') { 
+        infoText = 
+            `<h1>Rising Thunder Effect</h1>
+          
+            <p>Vibrant Gems: ?</p>`
+        ;
+    }
 }   
-//lighting assalt
-//lighting cloak
-//sparks swap
-// wave
+
+
 
 
 
 
 //фростдрав инфо
 
-else if (currentSelection === 'Frost Grab★★') {
+else if (currentSelection === 'Frost Grab') {
     if (type === 'mod') {
         infoText = 
             `<h1>Frost Grab Modification</h1>
@@ -1516,9 +1627,9 @@ else if (currentSelection === 'Frost Grab★★') {
             <p>Drift Shard/Rush Shard ❌</p>
             <p>Aeon Logstone/Eternal Logstone ✅</p>
             <p>Crystal Lens/Perfect Lens ❌</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>
-            <p>Vibrant Gem ✅</p>
-            <p>Round spark✅</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
+            <p>Vibrant Gem ❌</p>
+            <p>Round spark❌</p>
           <p>Spring Spark❌</p>
           <p>Magnet Spark❌</p>
           <p>Tornado Spark❌</p>
@@ -1529,29 +1640,31 @@ else if (currentSelection === 'Frost Grab★★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Frost Grab Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Frost Grab Effect</h1>
-            <p>Aeon and Eternal Logstones: Increases the duration of the grab</p>
+           
             <p>Blast Spark info Makes a trail of ice appear when you move with this mantra</p>
-            <p>Glass and Magnifying Stones: Increases the range of the grab</p>
-            <p>Vibrant Gem: Increases the damage of the grab</p>`
+           
+            <p>Vibrant Gems (Only Works With Blast Spark): Makes the ice from the trail larger
+</p>`
         ;
     }
 }
 
-else if (currentSelection === 'Ice Fissure★★★') {
+else if (currentSelection === 'Ice Fissure') {
     if (type === 'mod') {
         infoText = 
             `<h1>Ice Fissure Modification</h1>
-            <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ✅</p>
-            <p>Aeon Logstone/Eternal Logstone ❌</p>
-            <p>Crystal Lens/Perfect Lens ✅</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>
-            <p>Vibrant Gem ❌</p>
+            <p>Cloud Stone/Stratus Stone ✅</p>
+            <p>Drift Shard/Rush Shard ❌</p>
+            <p>Aeon Logstone/Eternal Logstone ✅</p>
+            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
+            <p>Vibrant Gem ✅</p>
             <p>Round spark✅</p>
           <p>Spring Spark❌</p>
           <p>Magnet Spark❌</p>
@@ -1563,25 +1676,24 @@ else if (currentSelection === 'Ice Fissure★★★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Ice Fissure Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Ice Fissure Effect</h1>
-            <p>Drift and Rush Shards: Increases the range of the fissure</p>
-            <p>Round spark:?</p>
-            <p>Crystal and Perfect Lens: Increases the width of the fissure</p>
-            <p>Glass and Magnifying Stones: Increases the range of the fissure</p>`
+            <p>??</p>
+            `
         ;
     }
 }
 
-else if (currentSelection === 'Ice Chain★') {
+else if (currentSelection === 'Ice Chain') {
     if (type === 'mod') {
         infoText = 
             `<h1>Ice Chains Modification</h1>
             <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ❌</p>
+            <p>Drift Shard/Rush Shard ✅</p>
             <p>Aeon Logstone/Eternal Logstone ✅</p>
             <p>Crystal Lens/Perfect Lens ✅</p>
             <p>Glass Stone/Magnifying Stone ✅</p>
@@ -1597,29 +1709,31 @@ else if (currentSelection === 'Ice Chain★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Ice Chains Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Ice Chains Effect</h1>
-            <p>Aeon and Eternal Logstones: Increases the duration of the chains</p>
-            <p>Crystal and Perfect Lens: Increases the range of the chains</p>
-            <p>Glass and Magnifying Stones: Increases the duration of the chains</p>
-            <p>Vibrant Gem: Increases the damage of the chains</p>`
+            <p>Aeon and Eternal Logstones: Delays the chains firing
+</p>
+            <p>Glass and Magnifying Stones: ?
+</p>
+            `
         ;
     }
 }
 
-else if (currentSelection === 'Ice Lance★★') {
+else if (currentSelection === 'Ice Lance') {
     if (type === 'mod') {
         infoText = 
             `<h1>Ice Lance Modification</h1>
-            <p>Cloud Stone/Stratus Stone ❌</p>
+            <p>Cloud Stone/Stratus Stone ✅</p>
             <p>Drift Shard/Rush Shard ❌</p>
-            <p>Aeon Logstone/Eternal Logstone ❌</p>
-            <p>Crystal Lens/Perfect Lens ✅</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>
-            <p>Vibrant Gem ✅</p>
+            <p>Aeon Logstone/Eternal Logstone ✅</p>
+            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
+            <p>Vibrant Gem ❌</p>
             <p>Round spark❌</p>
           <p>Spring Spark❌</p>
           <p>Magnet Spark❌</p>
@@ -1631,14 +1745,15 @@ else if (currentSelection === 'Ice Lance★★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Ice Lance Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Ice Lance Effect</h1>
-            <p>Crystal and Perfect Lens: Increases the range of the lance</p>
-            <p>Glass and Magnifying Stones: Increases the range of the lance</p>
-            <p>Vibrant Gem: Increases the damage of the lance</p>`
+            <p>Aeon and Eternal Logstones: Supposedly makes the chill last longer
+e</p>
+            `
         ;
     }
 }
@@ -1648,11 +1763,11 @@ else if (currentSelection === 'Ice Beam') {
     if (type === 'mod') {
         infoText = 
             `<h1>Ice Beam Modification</h1>
-            <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ✅</p>
-            <p>Aeon Logstone/Eternal Logstone ❌</p>
-            <p>Crystal Lens/Perfect Lens ✅</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>
+            <p>Cloud Stone/Stratus Stone ✅</p>
+            <p>Drift Shard/Rush Shard ❌</p>
+            <p>Aeon Logstone/Eternal Logstone ✅</p>
+            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
             <p>Vibrant Gem ✅</p>
             <p>Round spark❌</p>
           <p>Spring Spark❌</p>
@@ -1665,28 +1780,28 @@ else if (currentSelection === 'Ice Beam') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Ice Beam Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Ice Beam Effect</h1>
-            <p>Drift and Rush Shards: Increases the range of the beam</p>
-            <p>Crystal and Perfect Lens: Increases the range and speed of the beam</p>
-            <p>Glass and Magnifying Stones: Increases the range of the beam</p>
-            <p>Vibrant Gem: Increases the damage of the beam</p>`
+            <p>Cloud and Stratus Stones: Makes the beam and it's hitbox larger
+</p>
+           `
         ;
     }
 }
 
-else if (currentSelection === 'Ice Blade★') {
+else if (currentSelection === 'Ice Blade') {
     if (type === 'mod') {
         infoText = 
             `<h1>Ice Blade Modification</h1>
             <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ✅</p>
-            <p>Aeon Logstone/Eternal Logstone ❌</p>
+            <p>Drift Shard/Rush Shard ❌</p>
+            <p>Aeon Logstone/Eternal Logstone ✅</p>
             <p>Crystal Lens/Perfect Lens ✅</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
             <p>Vibrant Gem ✅</p>
             <p>Round spark❌</p>
           <p>Spring Spark❌</p>
@@ -1699,15 +1814,14 @@ else if (currentSelection === 'Ice Blade★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Ice Blade Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
            `<h1>Ice Blade Effect</h1>
-            <p>Drift and Rush Shards: Increases the range of the blade</p>
-            <p>Crystal and Perfect Lens: Increases the range of the blade</p>
-            <p>Glass and Magnifying Stones: Increases the range of the blade</p>
-            <p>Vibrant Gem: Increases the damage of the blade</p>`
+            <p>???</p>
+            `
         ;
     }
 }
@@ -1715,12 +1829,12 @@ else if (currentSelection === 'Ice Spikes') {
     if (type === 'mod') {
         infoText = 
             `<h1>Ice Spike Modification</h1>
-            <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ✅</p>
-            <p>Aeon Logstone/Eternal Logstone ✅</p>
-            <p>Crystal Lens/Perfect Lens ✅</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>
-            <p>Vibrant Gem ✅</p>
+            <p>Cloud Stone/Stratus Stone ✅</p>
+            <p>Drift Shard/Rush Shard ❌</p>
+            <p>Aeon Logstone/Eternal Logstone ❌</p>
+            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>
+            <p>Vibrant Gem ❌</p>
             <p>Round spark❌</p>
           <p>Spring Spark❌</p>
           <p>Magnet Spark❌</p>
@@ -1732,15 +1846,15 @@ else if (currentSelection === 'Ice Spikes') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Ice Spike Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Ice Spike Effect</h1>
-            <p>Drift and Rush Shards: Increases the range of the spike</p>
-            <p>Crystal and Perfect Lens: Increases the range of the spike</p>
-            <p>Glass and Magnifying Stones: Increases the range of the spike</p>
-            <p>Vibrant Gem: Increases the damage of the spike</p>`
+            <p>Cloud and Stratus Stones: Makes ice spikes and their hitbox larger
+</p>
+            `
         ;
     }
 }
@@ -1765,7 +1879,8 @@ else if (currentSelection === 'Frozen Servants') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Frozen Servants Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -1786,7 +1901,7 @@ else if (currentSelection === 'Warden\'s Blades') {
             <p>Cloud Stone/Stratus Stone ✅</p>
             <p>Drift Shard/Rush Shard ✅</p>
             <p>Aeon Logstone/Eternal Logstone ❌</p>
-            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Crystal Lens/Perfect Lens ✅</p>
             <p>Glass Stone/Magnifying Stone ❌</p>  
             <p>Vibrant Gem ❌</p>
             <p>Round spark❌</p>
@@ -1800,7 +1915,8 @@ else if (currentSelection === 'Warden\'s Blades') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Warden Blades Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -1810,7 +1926,7 @@ else if (currentSelection === 'Warden\'s Blades') {
     }
 }
 
-else if (currentSelection === 'Ice Daggers★') {
+else if (currentSelection === 'Ice Daggers') {
     if (type === 'mod') {
         infoText = 
             `<h1>Ice Daggers Modification</h1>
@@ -1831,7 +1947,8 @@ else if (currentSelection === 'Ice Daggers★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Ice Daggers Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -1843,47 +1960,17 @@ else if (currentSelection === 'Ice Daggers★') {
     }
 }
 
-else if (currentSelection === 'Ice Chain★') {
-    if (type === 'mod') {
-        infoText = 
-            `<h1>Ice Chains Modification</h1>
-            <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ✅</p>
-            <p>Aeon Logstone/Eternal Logstone ✅</p>
-            <p>Crystal Lens/Perfect Lens ❌</p>
-            <p>Glass Stone/Magnifying Stone ❌</p>  
-            <p>Vibrant Gem ❌</p>
-            <p>Round spark❌</p>
-          <p>Spring Spark❌</p>
-          <p>Magnet Spark❌</p>
-          <p>Tornado Spark❌</p>
-          <p>Multiplying Spark❌</p>
-          <p>Reversal Spark❌</p>
-          <p>Blast Spark❌</p>`
-        ;
-    } else if (type === 'leveling') {
-        infoText = 
-            `<h1>Ice Chains Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
-        ;
-    } else if (type === 'effect') { 
-        infoText = 
-            `<h1>Ice Chains Effect</h1>
-            <p>Drift and Rush Shards: Delays the chains firing</p>
-            <p>Aeon and Eternal Logstones: ?</p>`
-        ;
-    }
-}
 
-else if (currentSelection === 'Ice Eruption★') {
+
+else if (currentSelection === 'Ice Eruption') {
     if (type === 'mod') {
         infoText = 
             `<h1>Ice Eruption Modification</h1>
-            <p>Cloud Stone/Stratus Stone ❌</p>
+            <p>Cloud Stone/Stratus Stone ✅</p>
             <p>Drift Shard/Rush Shard ❌</p>
             <p>Aeon Logstone/Eternal Logstone ✅</p>
-            <p>Crystal Lens/Perfect Lens ✅</p>
-            <p>Glass Stone/Magnifying Stone ✅</p>  
+            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Glass Stone/Magnifying Stone ❌</p>  
             <p>Vibrant Gem ✅</p>
             <p>Round spark✅</p>
           <p>Spring Spark❌</p>
@@ -1896,7 +1983,8 @@ else if (currentSelection === 'Ice Eruption★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Ice Eruption Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -1904,20 +1992,19 @@ else if (currentSelection === 'Ice Eruption★') {
             <p>Aeon and Eternal Logstones: ?</p>
             <p>Crystal and Perfect Lens: ?</p>
             <p>Round Spark: Removes the 'hitbox' and damage from the mantra altogether, and changes the function so that the ice eruption instead causes a tall and large circular ice wall around the user</p>
-            <p>Glass and Magnifying Stones: Increases explosion radius of eruption</p>
-            <p>Vibrant Gem: Increases mantra damage by 10%</p>`
+            `
         ;
     }
 }
 
-else if (currentSelection === 'Ice Forge★') {
+else if (currentSelection === 'Ice Forge') {
     if (type === 'mod') {
         infoText = 
             `<h1>Ice Forge Modification</h1>
             <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ❌</p>
-            <p>Aeon Logstone/Eternal Logstone ✅</p>
-            <p>Crystal Lens/Perfect Lens ✅</p>
+            <p>Drift Shard/Rush Shard ✅</p>
+            <p>Aeon Logstone/Eternal Logstone ❌</p>
+            <p>Crystal Lens/Perfect Lens ❌</p>
             <p>Glass Stone/Magnifying Stone ❌</p>  
             <p>Vibrant Gem ❌</p>
             <p>Round spark❌</p>
@@ -1931,66 +2018,36 @@ else if (currentSelection === 'Ice Forge★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Ice Forge Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Ice Forge Effect</h1>
-            <p>Aeon and Eternal Logstones: ?</p>
+        
              <p> Blast Spark info Causes the shuriken projectiles to explode upon impact with something</p>
           <p> Magnet Spark info If shurikens hit, teleport and aerial kick the victim.</p>
-            <p>Crystal and Perfect Lens: Increases range of ice forge aura</p>
-            <p>Talent Bonded Ice: Forge grants slow immunity and slight HP regen to allies within the aura</p>`
+            <p>Drift and Rush Shards: Makes the shurikens travel faster
+</p>
+            `
         ;
     }
 }
 
-else if (currentSelection === 'Ice Lance★★') {
-    if (type === 'mod') {
-        infoText = 
-            `<h1>Ice Lance Modification</h1>
-            <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ✅</p>
-            <p>Aeon Logstone/Eternal Logstone ✅</p>
-            <p>Crystal Lens/Perfect Lens ✅</p>
-            <p>Glass Stone/Magnifying Stone ❌</p>  
-            <p>Vibrant Gem ❌</p>
-            <p>Round spark❌</p>
-          <p>Spring Spark❌</p>
-          <p>Magnet Spark❌</p>
-          <p>Tornado Spark❌</p>
-          <p>Multiplying Spark❌</p>
-          <p>Reversal Spark❌</p>
-          <p>Blast Spark❌</p>`
-        ;
-    } else if (type === 'leveling') {
-        infoText = 
-            `<h1>Ice Lance Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
-        ;
-    } else if (type === 'effect') { 
-        infoText = 
-            `<h1>Ice Lance Effect</h1>
-            <p>Drift and Rush Shards: Makes the lance faster</p>
-            <p>Aeon and Eternal Logstones: ?</p>
-            <p>Crystal and Perfect Lens: Increases range of ice lance</p>
-            <p>Talent Frozen Pin Cushion: Ice lance triggers ice daggers and ice spikes on proc</p>`
-        ;
-    }
-}
 
-else if (currentSelection === 'Ice Laser★★') {
+
+else if (currentSelection === 'Ice Laser') {
     if (type === 'mod') {
         infoText = 
             `<h1>Ice Laser Modification</h1>
-            <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ✅</p>
+            <p>Cloud Stone/Stratus Stone ✅</p>
+            <p>Drift Shard/Rush Shard ❌</p>
             <p>Aeon Logstone/Eternal Logstone ❌</p>
             <p>Crystal Lens/Perfect Lens ✅</p>
             <p>Glass Stone/Magnifying Stone ❌</p>  
             <p>Vibrant Gem ❌</p>
             <p>Round spark❌</p>
-          <p>Spring Spark❌</p>
+          <p>Spring Spark✅</p>
           <p>Magnet Spark❌</p>
           <p>Tornado Spark❌</p>
           <p>Multiplying Spark❌</p>
@@ -2000,26 +2057,29 @@ else if (currentSelection === 'Ice Laser★★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Ice Laser Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Ice Laser Effect</h1>
-            <p>Drift and Rush Shards: Makes the laser faster</p>
-            <p>Crystal and Perfect Lens: Increases range of ice laser</p>`
+            <p>Cloud and Stratus Stones: Shoot more bullet.(+1 Per cloud)
+</p>
+            <p>Spring Spark: When you shoot the ice laser projectile, the projectile stays exactly where you shot it for a second and THEN it shoots
+</p>`
         ;
     }
 }
 
-else if (currentSelection === 'Iceberg★★★') {
+else if (currentSelection === 'Iceberg') {
     if (type === 'mod') {
         infoText = 
             `<h1>Iceberg Modification</h1>
             <p>Cloud Stone/Stratus Stone ✅</p>
-            <p>Drift Shard/Rush Shard ❌</p>
+            <p>Drift Shard/Rush Shard ✅</p>
             <p>Aeon Logstone/Eternal Logstone ✅</p>
             <p>Crystal Lens/Perfect Lens ✅</p>
-            <p>Glass Stone/Magnifying Stone ❌</p>  
+            <p>Glass Stone/Magnifying Stone ✅</p>  
             <p>Vibrant Gem ❌</p>
             <p>Round spark❌</p>
           <p>Spring Spark❌</p>
@@ -2032,28 +2092,29 @@ else if (currentSelection === 'Iceberg★★★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Iceberg Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Iceberg Effect</h1>
-            <p>Cloud and Stratus Stones: Makes the iceberg larger</p>
-            <p>Aeon and Eternal Logstones: ?</p>
-            <p>Crystal and Perfect Lens: Increases range of iceberg</p>`
+            <p>Drift and Rush Shards: Increases the healing from the 'Iceberg'
+</p>
+            `
         ;
     }
 }
 
-else if (currentSelection === 'Glacial Arc★') {
+else if (currentSelection === 'Glacial Arc') {
     if (type === 'mod') {
         infoText = 
             `<h1>Glacial Arc Modification</h1>
-            <p>Cloud Stone/Stratus Stone ❌</p>
-            <p>Drift Shard/Rush Shard ✅</p>
-            <p>Aeon Logstone/Eternal Logstone ✅</p>
+            <p>Cloud Stone/Stratus Stone ✅</p>
+            <p>Drift Shard/Rush Shard ❌</p>
+            <p>Aeon Logstone/Eternal Logstone ❌</p>
             <p>Crystal Lens/Perfect Lens ✅</p>
-            <p>Glass Stone/Magnifying Stone ❌</p>  
-            <p>Vibrant Gem ❌</p>
+            <p>Glass Stone/Magnifying Stone ✅</p>  
+            <p>Vibrant Gem✅</p>
             <p>Round spark❌</p>
           <p>Spring Spark❌</p>
           <p>Magnet Spark❌</p>
@@ -2065,19 +2126,23 @@ else if (currentSelection === 'Glacial Arc★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Glacial Arc Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Glacial Arc Effect</h1>
-            <p>Drift and Rush Shards: Makes the arc faster</p>
-            <p>Aeon and Eternal Logstones: ?</p>
-            <p>Crystal and Perfect Lens: Increases range of glacial arc</p>`
+            <p>Cloud and Stratus Stones: Makes the Glacial Arc wider
+</p>
+            <p>Glass and Magnifying Stones: Adds a small explosion to the end of the Glacial Arc, adding more stones will make the explosion larger
+</p>
+            <p>Crystal and Perfect Lens: Makes the Glacial Arc longer
+</p>`
         ;
     }
 }
 
-else if (currentSelection === 'Frost Wisp★★') {
+else if (currentSelection === 'Frost Wisp') {
     if (type === 'mod') {
         infoText = 
             `<h1>Frost Wisp Modification</h1>
@@ -2104,13 +2169,14 @@ else if (currentSelection === 'Frost Wisp★★') {
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Frost Wisp Effect</h1>
-            <p>Aeon and Eternal Logstones: увеличивает длительность</p>
+            <p>Aeon and Eternal Logstones: Makes the wisp last longer but adds more ritual keys to the ritual cast
+</p>
            `
         ;
     }
 }
 
-else if (currentSelection === 'Ice Skate★★★') {
+else if (currentSelection === 'Ice Skate') {
     if (type === 'mod') {
         infoText = 
             `<h1>Ice Skate Modification</h1>
@@ -2137,20 +2203,20 @@ else if (currentSelection === 'Ice Skate★★★') {
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Ice Skate Effect</h1>
-            <p>нету</p>
+            <p>???</p>
            `
         ;
     }
 }
 
-else if (currentSelection === 'Ice Cubes★★★') {
+else if (currentSelection === 'Ice Cubes') {
     if (type === 'mod') {
         infoText = 
             `<h1>Ice Cubes Modification</h1>
             <p>Cloud Stone/Stratus Stone ❌</p>
             <p>Drift Shard/Rush Shard ❌</p>
-            <p>Aeon Logstone/Eternal Logstone ❌</p>
-            <p>Crystal Lens/Perfect Lens ❌</p>
+            <p>Aeon Logstone/Eternal Logstone ✅</p>
+            <p>Crystal Lens/Perfect Lens ✅</p>
             <p>Glass Stone/Magnifying Stone ❌</p>  
             <p>Vibrant Gem ❌</p>
             <p>Round spark❌</p>
@@ -2164,7 +2230,8 @@ else if (currentSelection === 'Ice Cubes★★★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Ice Cubes Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -2175,7 +2242,7 @@ else if (currentSelection === 'Ice Cubes★★★') {
     }
 }
 
-else if (currentSelection === 'Ice Carve★★') {
+else if (currentSelection === 'Ice Carve') {
     if (type === 'mod') {
         infoText = 
             `<h1>Ice Carve Modification</h1>
@@ -2196,7 +2263,8 @@ else if (currentSelection === 'Ice Carve★★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Ice Carve Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -2209,7 +2277,7 @@ else if (currentSelection === 'Ice Carve★★') {
 }
 
 
-else if (currentSelection === 'Ice Flock★★') {
+else if (currentSelection === 'Ice Flock') {
     if (type === 'mod') {
         infoText = 
             `<h1>Ice Flock Modification</h1>
@@ -2230,16 +2298,17 @@ else if (currentSelection === 'Ice Flock★★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Ice Flock Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Ice Flock Effect</h1>
-            <p>нету</p>
+            <p>???</p>
            `
     }
 }
-else if (currentSelection === 'Rising Frost★★') {
+else if (currentSelection === 'Rising Frost') {
     if (type === 'mod') {
         infoText = 
             `<h1>Rising Frost Modification</h1>
@@ -2260,7 +2329,8 @@ else if (currentSelection === 'Rising Frost★★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Rising Frost Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -2273,7 +2343,7 @@ else if (currentSelection === 'Rising Frost★★') {
 
 
 
-else if (currentSelection === 'Ice Smash★') {
+else if (currentSelection === 'Ice Smash') {
     if (type === 'mod') {
         infoText = 
             `<h1>Ice Smash Modification</h1>
@@ -2300,41 +2370,12 @@ else if (currentSelection === 'Ice Smash★') {
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Ice Smash Effect</h1>
-            <p>Cloud and Stratus Stones: Makes the Glaive bigger</p>
-            <p>нету ?</p>`
+          
+            <p>??</p>`
 
     }
 }
- else if (currentSelection === "Fleeting Sparks") {
-    if (type === "mod") {
-      infoText = `<h1>Fleeting Spark Modification</h1>
-                <p>Cloud Stone/Stratus Stone ❌</p>
-                <p>Drift Shard/Rush Shard ✅</p>
-                <p>Aeon Logstone/Eternal Logstone ❌</p>
-                <p>Crystal Lens/Perfect Lens ✅</p>
-                <p>Glass Stone/Magnifying Stone ✅</p>
-                <p>Vibrant Gem ❌</p>
-                <p>Round spark❌</p>
-          <p>Spring Spark❌</p>
-          <p>Magnet Spark✅✅</p>
-          <p>Tornado Spark❌</p>
-          <p>Multiplying Spark✅✅</p>
-          <p>Reversal Spark❌</p>
-          <p>Blast Spark❌</p>`;
-    } else if (type === "leveling") {
-      infoText = `<h1>Fleeting Spark Leveling</h1>
-                <p>У этой мантры нет левелинг эффектов</p>`;
-    } else if (type === "effect") {
-      infoText = `<h1>Fleeting Spark Effect</h1>
-                <p>Cloud and Stratus Stones: Increases the range and speed of the attack</p>
-                <p>Magnet Spark info Doubles the orb amount, orb damage is split between all</p>
-          <p>Multiplying Spark info Removes laser function, the orbs now ignore all obstacles defending the target</p>
-          <p>Multiplying + Magnet Spark: Both effects are present, orbs ignore all obstacles defending the target</p>
-                <p>Crystal and Perfect Lens: Increases the range of the strikes</p>
-                <p>Glass and Magnifying Stones: Increases the range</p>
-                <p>Vibrant Gem: ?</p>`;
-    }
-  }
+ 
 
 
 
@@ -2360,7 +2401,8 @@ else if (currentSelection === 'Wind Blade') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Wind Blade Leveling</h1>
-            <p>увеличивает дефолт демедж</p>`
+            <p>Default damage changes: 25.5, 29, 32.5, 35.5, 39
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -2391,7 +2433,8 @@ else if (currentSelection === 'Tornado Kick') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Tornado Kick Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -2431,7 +2474,7 @@ else if (currentSelection === 'Air Force') {
             <p>Vibrant Gems: ?</p>`
     }
 }
-else if (currentSelection === 'Gale Lunge★') {
+else if (currentSelection === 'Gale Lunge') {
     if (type === 'mod') {
         infoText = 
             `<h1>Gale Lunge Modification</h1>
@@ -2462,7 +2505,7 @@ else if (currentSelection === 'Gale Lunge★') {
             <p>Aeon and Eternal Logstones: ?</p>`
     }
 }
-else if (currentSelection === 'Tornado★') {
+else if (currentSelection === 'Tornado') {
     if (type === 'mod') {
         infoText = 
             `<h1>Tornado Modification</h1>
@@ -2493,7 +2536,7 @@ else if (currentSelection === 'Tornado★') {
             <p>Crystal and Perfect Lens: ?</p>`
     }
 }
-else if (currentSelection === 'Heavenly Wind★') {
+else if (currentSelection === 'Heavenly Wind') {
     if (type === 'mod') {
         infoText = 
             `<h1>Heavenly Wind Modification</h1>
@@ -2514,7 +2557,8 @@ else if (currentSelection === 'Heavenly Wind★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Heavenly Wind Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -2524,7 +2568,7 @@ else if (currentSelection === 'Heavenly Wind★') {
             <p>Drift and Rush Shards: ?</p>`
     }
 }
-else if (currentSelection === 'Galetrap★') {
+else if (currentSelection === 'Galetrap') {
     if (type === 'mod') {
         infoText = 
             `<h1>Galetrap Modification</h1>
@@ -2545,7 +2589,8 @@ else if (currentSelection === 'Galetrap★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Galetrap Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -2556,7 +2601,7 @@ else if (currentSelection === 'Galetrap★') {
             <p>Vibrant Gems: ?</p>`
     }
 }
-else if (currentSelection === 'Gale Punch★') {
+else if (currentSelection === 'Gale Punch') {
     if (type === 'mod') {
         infoText = 
             `<h1>Gale Punch Modification</h1>
@@ -2577,7 +2622,7 @@ else if (currentSelection === 'Gale Punch★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Gale Punch Leveling</h1>
-            <p>увеличивает демедж</p>`
+            <p>inc damage</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -2588,7 +2633,7 @@ else if (currentSelection === 'Gale Punch★') {
             <p>Vibrant Gems: ?</p>`
     }
 }
-else if (currentSelection === 'Wind Forge★') {
+else if (currentSelection === 'Wind Forge') {
     if (type === 'mod') {
         infoText = 
             `<h1>Wind Forge Modification</h1>
@@ -2619,7 +2664,7 @@ else if (currentSelection === 'Wind Forge★') {
             <p>Multiplying sparks: Splits the wind forges into multiple lock-on projectile</p>`
     }
 }
-else if (currentSelection === 'Twister Kicks★') {
+else if (currentSelection === 'Twister Kicks') {
     if (type === 'mod') {
         infoText = 
             `<h1>Twister Kicks Modification</h1>
@@ -2640,7 +2685,8 @@ else if (currentSelection === 'Twister Kicks★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Twister Kicks Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -2649,7 +2695,7 @@ else if (currentSelection === 'Twister Kicks★') {
             <p>Aeon and Eternal Logstones: ?</p>`
     }
 }
-else if (currentSelection === 'Champion\'s Whirlthrow★★') {
+else if (currentSelection === 'Champion\'s Whirlthrow') {
     if (type === 'mod') {
         infoText = 
             `<h1>Champion's Whirlthrow Modification</h1>
@@ -2680,7 +2726,7 @@ else if (currentSelection === 'Champion\'s Whirlthrow★★') {
             <p>Vibrant Gems: ?</p>`
     }
 }
-else if (currentSelection === 'Rising Wind★★') {
+else if (currentSelection === 'Rising Wind') {
     if (type === 'mod') {
         infoText = 
             `<h1>Rising Wind Modification</h1>
@@ -2701,7 +2747,8 @@ else if (currentSelection === 'Rising Wind★★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Rising Wind Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -2711,7 +2758,7 @@ else if (currentSelection === 'Rising Wind★★') {
             <p>Crystal and Perfect Lens: ?</p>`
     }
 }
-else if (currentSelection === 'Wind Gun★★') {
+else if (currentSelection === 'Wind Gun') {
     if (type === 'mod') {
         infoText = 
             `<h1>Wind Gun Modification</h1>
@@ -2732,7 +2779,8 @@ else if (currentSelection === 'Wind Gun★★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Wind Gun Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -2744,7 +2792,7 @@ else if (currentSelection === 'Wind Gun★★') {
             <p>Blast sparks: Turns the Wind Gun into a 'wind shotgun', shorter ranged but a lot more bullets</p>`
     }
 }
-else if (currentSelection === 'Gale Wisp★★') {
+else if (currentSelection === 'Gale Wisp') {
     if (type === 'mod') {
         infoText = 
             `<h1>Gale Wisp Modification</h1>
@@ -2765,7 +2813,8 @@ else if (currentSelection === 'Gale Wisp★★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Gale Wisp Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -2773,7 +2822,7 @@ else if (currentSelection === 'Gale Wisp★★') {
             <p>Aeon and Eternal Logstones: Makes the wisp last longer but adds more ritual keys to the ritual cast</p>`
     }
 }
-else if (currentSelection === 'Wind Carve★★') {
+else if (currentSelection === 'Wind Carve') {
     if (type === 'mod') {
         infoText = 
             `<h1>Wind Carve Modification</h1>
@@ -2794,7 +2843,8 @@ else if (currentSelection === 'Wind Carve★★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Wind Carve Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -2805,7 +2855,7 @@ else if (currentSelection === 'Wind Carve★★') {
             <p>Vibrant Gems: ?</p>`
     }
 }
-else if (currentSelection === 'Astral Wind★★★') {
+else if (currentSelection === 'Astral Wind') {
     if (type === 'mod') {
         infoText = 
             `<h1>Astral Wind Modification</h1>
@@ -2826,7 +2876,7 @@ else if (currentSelection === 'Astral Wind★★★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Astral Wind Leveling</h1>
-            <p>увеличивает дефол демедж</p>`
+            <p>inc damage</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -2836,7 +2886,7 @@ else if (currentSelection === 'Astral Wind★★★') {
             <p>Vibrant Gems: ?</p>`
     }
 }
-else if (currentSelection === 'Pillars of Erisia★★★') {
+else if (currentSelection === 'Pillars of Erisia') {
     if (type === 'mod') {
         infoText = 
             `<h1>Pillars of Erisia Modification</h1>
@@ -2857,7 +2907,8 @@ else if (currentSelection === 'Pillars of Erisia★★★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Pillars of Erisia Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -2865,7 +2916,7 @@ else if (currentSelection === 'Pillars of Erisia★★★') {
             <p>Crystal and Perfect Lens: ?</p>`
     }
 }
-else if (currentSelection === 'Wind Passage★★★') {
+else if (currentSelection === 'Wind Passage') {
     if (type === 'mod') {
         infoText = 
             `<h1>Astral Wind Modification</h1>
@@ -2886,7 +2937,8 @@ else if (currentSelection === 'Wind Passage★★★') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Astral Wind Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -2917,7 +2969,8 @@ else if (currentSelection === 'Dark Blade') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Dark Blade Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -3043,7 +3096,8 @@ else if (currentSelection === 'Shadow Eruption') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Shadow Eruption Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -3074,7 +3128,8 @@ else if (currentSelection === 'Shadow Seekers') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Shadow Seekers Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -3135,7 +3190,8 @@ else if (currentSelection === 'Shade Devour') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Shade Devour Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -3169,7 +3225,8 @@ else if (currentSelection === 'Shadow Roar') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Shadow Roar Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -3201,7 +3258,8 @@ else if (currentSelection === 'Rising Shadow') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Rising Shadow Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -3232,7 +3290,8 @@ else if (currentSelection === 'Shadow Meteor') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Shadow Meteor Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -3262,7 +3321,8 @@ else if (currentSelection === 'Devouring Eye') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Devouring Eye Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -3291,7 +3351,8 @@ else if (currentSelection === 'Shade Wisp') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Shade Wisp Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -3320,7 +3381,8 @@ else if (currentSelection === 'Shadow Assault') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Shadow Assault Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -3385,7 +3447,8 @@ else if (currentSelection === 'Shade Bringer') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Shade Bringer Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -3418,7 +3481,8 @@ else if (currentSelection === 'Shadow Vortex') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Shadow Vortex Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`
+            <p>This mantra has no leveling effect.
+</p>`
         ;
     } else if (type === 'effect') { 
         infoText = 
@@ -3445,7 +3509,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Metal Eruption Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Metal Eruption</h1>
               <p>Cloud and Stratus Stones: Makes the 'eruption' larger</p>
@@ -3494,7 +3559,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Metal Rampart Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Metal Rampart</h1>
               <p>Cloud and Stratus Stones: ?</p>
@@ -3518,7 +3584,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Metal Kick Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Metal Kick</h1>
               <p>Spring Spark: Metal Kick will become a faster drop kick but removes the knockdown effect</p>`;
@@ -3541,7 +3608,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Iron Skin Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Iron Skin</h1>
               <p>Aeon and Eternal Logstone: Makes Iron Skin last longer</p>
@@ -3566,7 +3634,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Chain Pull Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Chain Pull</h1>
               <p>Crystal and Perfect Lens: ?</p>
@@ -3591,7 +3660,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Metal Rain Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Metal Rain</h1>
               <p>Aeon and Eternal Logstones: ?</p>
@@ -3615,7 +3685,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Caltrops Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Caltrops</h1>
               <p>Cloud and Stratus Stones: Does nothing</p>
@@ -3640,7 +3711,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Firing Line Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Firing Line</h1>
               <p>Drift and Rush Shards: ?</p>`;
@@ -3663,7 +3735,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>>`;
   } else if (type === "leveling") {
     infoText = `<h1>Metal Fakeout Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Metal Fakeout</h1>
               <p>N/A</p>`;
@@ -3686,7 +3759,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Oxidizing Rush Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Oxidizing Rush</h1>
               <p>Crystal and Perfect Lens: ?</p>
@@ -3710,7 +3784,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Metal Ball Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Metal Ball</h1>
               <p>Aeon and Eternal Logstones: ?</p>`;
@@ -3733,7 +3808,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Metal Wisp Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Metal Wisp</h1>
               <p>Aeon and Eternal Logstones: Makes the wisp last longer but adds more ritual keys to the ritual cast</p>`;
@@ -3756,7 +3832,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Metal Armament Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Metal Armament</h1>
               <p>N/A</p>`;
@@ -3779,7 +3856,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Metal Gatling Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Metal Gatling</h1>
               <p>N/A</p>`;
@@ -3802,7 +3880,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Iron Slam Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Iron Slam</h1>
               <p>Cloud and Stratus Stones: Increases the slam hitbox</p>`;
@@ -3825,7 +3904,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Iron Hug Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Iron Hug</h1>
               <p>Talent Metal Absorption: Anyone hit by iron hug has their armour drained</p>`;
@@ -3848,7 +3928,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Rocket Lance Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Rocket Lance</h1>
               <p>N/A</p>`;
@@ -3871,7 +3952,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Flashfire Sweep Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Flashfire Sweep</h1>
     <p>Vibrant Gems: ?</p>
@@ -3895,7 +3977,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Iron Tether Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Iron Tether</h1>
     <p>Aeon and Eternal Logstones: Increases duration of trap</p>
@@ -3920,7 +4003,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Permafrost Prison Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Permafrost Prison</h1>
     <p>Cloud and Stratus Stones: Makes the prison bigger</p>
@@ -3945,7 +4029,8 @@ else if (currentSelection === 'Shadow Vortex') {
           <p>Blast Spark❌</p>`;
   } else if (type === "leveling") {
     infoText = `<h1>Tempest Blitz Leveling</h1>
-              <p>У этой мантры нет левелинг эффектов</p>`;
+              <p>This mantra has no leveling effect.
+</p>`;
   } else if (type === "effect") {
     infoText = `<h1>Tempest Blitz</h1>
   <p>N/A</p>`;
@@ -3975,7 +4060,8 @@ else if (currentSelection === "Arc Suit") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4007,7 +4093,8 @@ else if (currentSelection === "Arc Beam") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4038,7 +4125,8 @@ else if (currentSelection === "Arc Wave") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4069,7 +4157,8 @@ else if (currentSelection === "Mindsoothe") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4100,7 +4189,8 @@ else if (currentSelection === "Tranquil Circle") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4131,7 +4221,8 @@ else if (currentSelection === "Sightless Beam") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4162,7 +4253,8 @@ else if (currentSelection === "Equalizer") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4193,7 +4285,8 @@ else if (currentSelection === "Lord/s Slice") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4224,7 +4317,8 @@ else if (currentSelection === "Judgement") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4255,7 +4349,8 @@ else if (currentSelection === "Radiant Kick") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4286,7 +4381,8 @@ else if (currentSelection === "Blinding Dawn") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4317,7 +4413,8 @@ else if (currentSelection === "Radiant Dawn") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4348,7 +4445,8 @@ else if (currentSelection === "Precision Cuts") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4379,7 +4477,8 @@ else if (currentSelection === "Close Shave") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4410,7 +4509,8 @@ else if (currentSelection === "Fake Strike") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4442,7 +4542,8 @@ else  if (currentSelection === "Jet Kick ") {
   } else if (type === "leveling") {
     infoText = `
       <h1>${currentSelection} Leveling</h1>
-      <p>У этой мантры нет левелинг эффектов</p>
+      <p>This mantra has no leveling effect.
+</p>
     `;
   } else if (type === "effect") {
     infoText = `
@@ -4472,7 +4573,8 @@ else  if (currentSelection === "Jet Kick ") {
   } else if (type === "leveling") {
     infoText = `
       <h1>${currentSelection} Leveling</h1>
-      <p>У этой мантры нет левелинг эффектов</p>
+      <p>This mantra has no leveling effect.
+</p>
     `;
   } else if (type === "effect") {
     infoText = `
@@ -4501,7 +4603,8 @@ else  if (currentSelection === "Jet Kick ") {
   } else if (type === "leveling") {
     infoText = `
       <h1>${currentSelection} Leveling</h1>
-      <p>У этой мантры нет левелинг эффектов</p>
+      <p>This mantra has no leveling effect.
+</p>
     `;
   } else if (type === "effect") {
     infoText = `
@@ -4530,7 +4633,8 @@ else  if (currentSelection === "Jet Kick ") {
   } else if (type === "leveling") {
     infoText = `
       <h1>${currentSelection} Leveling</h1>
-      <p>У этой мантры нет левелинг эффектов</p>
+      <p>This mantra has no leveling effect.
+</p>
     `;
   } else if (type === "effect") {
     infoText = `
@@ -4560,7 +4664,8 @@ else  if (currentSelection === "Jet Kick ") {
     } else if (type === "leveling") {
       infoText = `
         <h1>${currentSelection} Leveling</h1>
-        <p>У этой мантры нет левелинг эффектов</p>
+        <p>This mantra has no leveling effect.
+</p>
       `;
     } else if (type === "effect") {
       infoText = `
@@ -4589,7 +4694,8 @@ else  if (currentSelection === "Jet Kick ") {
     } else if (type === "leveling") {
       infoText = `
         <h1>${currentSelection} Leveling</h1>
-        <p>У этой мантры нет левелинг эффектов</p>
+        <p>This mantra has no leveling effect.
+</p>
       `;
     } else if (type === "effect") {
       infoText = `
@@ -4618,7 +4724,8 @@ else  if (currentSelection === "Jet Kick ") {
     } else if (type === "leveling") {
       infoText = `
         <h1>${currentSelection} Leveling</h1>
-        <p>У этой мантры нет левелинг эффектов</p>
+        <p>This mantra has no leveling effect.
+</p>
       `;
     } else if (type === "effect") {
       infoText = `
@@ -4647,7 +4754,8 @@ else  if (currentSelection === "Jet Kick ") {
     } else if (type === "leveling") {
       infoText = `
         <h1>${currentSelection} Leveling</h1>
-        <p>У этой мантры нет левелинг эффектов</p>
+        <p>This mantra has no leveling effect.
+</p>
       `;
     } else if (type === "effect") {
       infoText = `
@@ -4676,7 +4784,8 @@ else  if (currentSelection === "Jet Kick ") {
     } else if (type === "leveling") {
       infoText = `
         <h1>${currentSelection} Leveling</h1>
-        <p>У этой мантры нет левелинг эффектов</p>
+        <p>This mantra has no leveling effect.
+</p>
       `;
     } else if (type === "effect") {
       infoText = `
@@ -4707,7 +4816,8 @@ else  if (currentSelection === "Jet Kick ") {
     } else if (type === "leveling") {
       infoText = `
         <h1>${currentSelection} Leveling</h1>
-        <p>У этой мантры нет левелинг эффектов</p>
+        <p>This mantra has no leveling effect.
+</p>
       `;
     } else if (type === "effect") {
       infoText = `
@@ -4741,7 +4851,8 @@ else if (currentSelection === "Brachial Spear") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4773,7 +4884,8 @@ else if (currentSelection === "Coral Spear") {
   } else if (type === "leveling") {
       infoText = `
           <h1>Coral Spear Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4804,7 +4916,8 @@ else if (currentSelection === "Dread Breath") {
   } else if (type === "leveling") {
       infoText = `
           <h1>Dread Breath Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4835,7 +4948,8 @@ else if (currentSelection === "Beast Burrow") {
   } else if (type === "leveling") {
       infoText = `
           <h1>Beast Burrow Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4866,7 +4980,8 @@ else if (currentSelection === "Enforcer Pull") {
   } else if (type === "leveling") {
       infoText = `
           <h1>Enforcer Pull Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4898,7 +5013,8 @@ else if (currentSelection === "Mecha Gatling") {
   } else if (type === "leveling") {
       infoText = `
           <h1>Mecha Gatling Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4929,7 +5045,8 @@ else if (currentSelection === "Whirling Blade") {
   } else if (type === "leveling") {
       infoText = `
           <h1>${currentSelection} Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -4961,7 +5078,8 @@ else if (currentSelection === "Abyssal Ridge") {
   } else if (type === "leveling") {
       infoText = `
           <h1>Abyssal Ridge Leveling</h1>
-          <p>У этой мантры нет левелинг эффектов</p>
+          <p>This mantra has no leveling effect.
+</p>
       `;
   } else if (type === "effect") {
       infoText = `
@@ -5004,7 +5122,7 @@ else if (currentSelection === 'STRONG LEFT') {
     } else if (type === 'effect') { 
         infoText = 
             `<h1>STRONG LEFT Effect</h1>
-            <p>нет эффектов</p>`;
+            <p>??</p>`;
     }
 }
 else if (currentSelection === 'Rapid Punches') {
@@ -5059,7 +5177,8 @@ else if (currentSelection === 'Skyshatter Kick') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Skyshatter Kick Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Skyshatter Kick Effect</h1>
@@ -5088,7 +5207,8 @@ else if (currentSelection === 'Karita Leap') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Karita Leap Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Karita Leap Effect</h1>
@@ -5117,7 +5237,8 @@ else if (currentSelection === 'Karita Divebomb') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Karita Divebomb Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Karita Divebomb Effect</h1>
@@ -5147,7 +5268,8 @@ else if (currentSelection === 'Tacet Drop Kick') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Tacet Drop Kick Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Tacet Drop Kick Effect</h1>
@@ -5175,7 +5297,8 @@ else if (currentSelection === 'Tacet Drop Kick') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Rally Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Rally Effect</h1>
@@ -5321,7 +5444,8 @@ else if (currentSelection === 'Tacet Drop Kick') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Revenge Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Revenge Effect</h1>
@@ -5379,7 +5503,8 @@ else if (currentSelection === 'Tacet Drop Kick') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Summon Cauldron Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Summon Cauldron Effect</h1>
@@ -5436,7 +5561,8 @@ else if (currentSelection === 'Tacet Drop Kick') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Gaze Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Gaze Effect</h1>
@@ -5466,7 +5592,8 @@ else if (currentSelection === 'Tacet Drop Kick') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Glare Leveling</h1>
-            <p>нету</p>`;
+            <p>There is not
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Glare Effect</h1>
@@ -5493,7 +5620,8 @@ else if (currentSelection === 'Tacet Drop Kick') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Exhaustion Strike Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>
+            <p>This mantra has no leveling effect.
+</p>
             <p>Each level grants +12.5% more posture transfer, from 50% LV1, 62.5% LV2, 75% LV3, 87.5% LV4, 100% LV5
 </p>
 <p>Damage changes: 20, 22, 24, 26 and 28 (+2 per level)</p>`;
@@ -5554,7 +5682,8 @@ else if (currentSelection === 'Tacet Drop Kick') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Sing Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Sing Effect</h1>
@@ -5585,7 +5714,8 @@ else if (currentSelection === 'Disguise') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Disguise Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Disguise Effect</h1>
@@ -5625,7 +5755,8 @@ else if (currentSelection === 'Disguise') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Rapid Slashes Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Rapid Slashes Effect</h1>
@@ -5653,7 +5784,8 @@ else if (currentSelection === 'Disguise') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Ceaseless Slashes Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Ceaseless Slashes Effect</h1>
@@ -5681,7 +5813,8 @@ else if (currentSelection === 'Disguise') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Master's Flourish Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Master's Flourish Effect</h1>
@@ -5710,7 +5843,8 @@ else if (currentSelection === 'Disguise') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Twincleave Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Twincleave Effect</h1>
@@ -5738,7 +5872,8 @@ else if (currentSelection === 'Disguise') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Prominence Draw Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Prominence Draw Effect</h1>
@@ -5767,7 +5902,8 @@ else if (currentSelection === 'Disguise') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Flashdraw Strike Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Flashdraw Strike Effect</h1>
@@ -5795,7 +5931,8 @@ else if (currentSelection === 'Disguise') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Pressure Blast Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Pressure Blast Effect</h1>
@@ -5823,7 +5960,8 @@ else if (currentSelection === 'Disguise') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Punishment Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Punishment Effect</h1>
@@ -5851,7 +5989,8 @@ else if (currentSelection === 'Disguise') {
     } else if (type === 'leveling') {
         infoText = 
             `<h1>Onslaught Leveling</h1>
-            <p>У этой мантры нет левелинг эффектов</p>`;
+            <p>This mantra has no leveling effect.
+</p>`;
     } else if (type === 'effect') { 
         infoText = 
             `<h1>Onslaught Effect</h1>
