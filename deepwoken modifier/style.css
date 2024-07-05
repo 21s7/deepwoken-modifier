@@ -1,0 +1,739 @@
+* {
+  -webkit-text-stroke: 0.5px #040d13;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(#264a50, #040d13);
+  min-height: 6666px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  zoom: 1.5; /* Увеличение размера на 50% */
+}
+
+.mainContainer {
+  background-image: url("image/background.png");
+  border-image: url("image/borderthin.png") 45%;
+  border-image-width: 15px;
+  border-image-outset: 5px;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: calc(50%-150px);
+}
+
+.topContainer {
+  background-color: rgb(31, 27, 27);
+  height: 50px;
+  align-items: center;
+  border-color: black;
+  border-image: url("image/borderthin.png") 45%;
+  border-image-width: 15px;
+  border-image-outset: 5px;
+}
+.topContainer button {
+  margin-left: 7px;
+  margin-right: 5px;
+  margin-top: 12px;
+  background: none;
+  border-style: groove;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 100%;
+  text-align: center;
+  background-color: #272727;
+  border-image: url("image/border.png") 0%;
+  border-image-width: 1px;
+  border-image-outset: 2px;
+  color: rgb(146, 150, 154);;
+}
+.topContainer button:hover {
+  color: rgb(196, 202, 207);
+  background-color: #3f3f3f;
+}
+.topContainer button:active {
+  color: rgb(249, 251, 253);
+  background-color: #676767;
+}
+.leftContainer {
+  background-color: bisque;
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  margin-left: 25px;
+  margin-top: 25px;
+  border: 5px solid transparent; /* Убедитесь, что здесь указана ширина и стиль рамки */
+  border-image: url("image/border.png") 45%; /* 30 - ширина области изображения, используемой для границы */
+  border-image-width: 15px;
+  border-image-outset: 2px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.rightContainer {
+  background-color: bisque;
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  margin-right: 25px;
+  margin-top: 25px;
+  border: 5px solid transparent; /* Убедитесь, что здесь указана ширина и стиль рамки */
+  border-image: url("image/border.png") 45%; /* 30 - ширина области изображения, используемой для границы */
+  border-image-width: 15px;
+  border-image-outset: 2px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.leftWindow button {
+  display: grid;
+  grid-template-columns: repeat(1, 108px);
+  margin: auto;
+  position: bottom;
+  gap: 20px;
+  padding: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 100%;
+}
+.hidden {
+  display: none;
+}
+
+.leftWindow {
+  border: 5px solid transparent;
+  border-image: url("image/border.png") 45%;
+  border-image-width: 15px;
+  border-image-outset: 2px;
+  background-image: url("image/background2.png");
+}
+#flameContainer,
+#frostContainer,
+#galeContainer,
+#shadowContainer,
+#ironContainer,
+#thunderContainer,
+#hybridContainer,
+#attunementlessContainer,
+#oathboundContainer,
+#monsterContainer {
+  margin: auto;
+  width: 125px;
+  background-image: url("image/background3.png");
+  background-repeat: repeat;
+  border: 5px solid transparent;
+  border-image: url("image/border.png") 45%;
+  border-image-width: 15px;
+  border-image-outset: 2px;
+}
+#frostButton {
+  color: rgb(67, 164, 255);
+}
+#thunderButton {
+  color: yellow;
+}
+#galeButton {
+  color: rgb(11, 196, 21);
+}
+#ironButton {
+  color: rgb(121, 121, 121);
+}
+
+#shadowButton {
+  color: black;
+}
+
+#flameContainer button {
+  color: rgb(255, 166, 0);
+}
+#frostContainer button {
+  color: rgb(67, 164, 255);
+}
+#flameButton {
+  color: rgb(255, 166, 0);
+}
+#ironContainer button {
+  color: rgb(65, 65, 65);
+}
+
+#shadowContainer button {
+  color: black;
+}
+#thunderContainer button {
+  color: yellow;
+}
+#galeContainer button {
+  color: rgb(11, 196, 21);
+}
+#hybridButton {
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-clip: text;
+  color: transparent;
+}
+#hybridButton:hover {
+  background: linear-gradient(
+    to right,
+    rgb(251, 62, 62),
+    rgb(255, 207, 118),
+    rgb(255, 255, 164),
+    rgb(98, 249, 98),
+    rgb(97, 97, 250),
+    rgb(182, 84, 251),
+    rgb(255, 173, 255)
+  );
+  background-clip: text;
+  color: transparent;
+}
+#hybridButton:active {
+  background: linear-gradient(
+    to right,
+    rgb(255, 162, 162),
+    rgb(255, 234, 196),
+    rgb(255, 255, 220),
+    rgb(206, 255, 206),
+    rgb(204, 204, 255),
+    rgb(211, 150, 255),
+    rgb(255, 216, 255)
+  );
+  background-clip: text;
+  color: transparent;
+}
+#hybridContainer #flmThn {
+  background: linear-gradient(to right, rgb(255, 145, 0), yellow);
+  background-clip: text;
+  color: transparent;
+}
+#hybridContainer #flmThn:hover {
+  background: linear-gradient(to right, rgb(255, 186, 96), rgb(255, 255, 106));
+  background-clip: text;
+  color: transparent;
+}
+#hybridContainer #flmThn:active {
+  background: linear-gradient(to right, rgb(255, 215, 162), rgb(255, 255, 167));
+  background-clip: text;
+  color: transparent;
+}
+
+#hybridContainer #mtlThn {
+  background: linear-gradient(to left, rgb(58, 58, 57), rgb(231, 231, 99));
+  background-clip: text;
+  color: transparent;
+}
+#hybridContainer #mtlThn:hover {
+  background: linear-gradient(to left, rgb(122, 122, 121), rgb(231, 231, 99));
+  background-clip: text;
+  color: transparent;
+}
+#hybridContainer #mtlThn:active {
+  background: linear-gradient(to left, rgb(179, 179, 175), rgb(229, 229, 199));
+  background-clip: text;
+  color: transparent;
+}
+
+#hybridContainer #sdwFst {
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 110, 255));
+  background-clip: text;
+  color: transparent;
+}
+#hybridContainer #sdwFst:hover {
+  background: linear-gradient(to right, rgb(88, 88, 88), rgb(93, 163, 255));
+  background-clip: text;
+  color: transparent;
+}
+#hybridContainer #sdwFst:active {
+  background: linear-gradient(to right, rgb(150, 150, 150), rgb(169, 202, 246));
+  background-clip: text;
+  color: transparent;
+}
+
+#hybridContainer #thnGle {
+  background: linear-gradient(to right, rgb(200, 255, 0), rgb(11, 102, 34));
+  background-clip: text;
+  color: transparent;
+}
+#hybridContainer #thnGle:hover {
+  background: linear-gradient(to right, rgb(230, 255, 137), rgb(76, 133, 90));
+  background-clip: text;
+  color: transparent;
+}
+#hybridContainer #thnGle:active {
+  background: linear-gradient(to right, rgb(233, 255, 154), rgb(129, 180, 142));
+  background-clip: text;
+  color: transparent;
+}
+#attunementlessButton {
+  background: linear-gradient(to top, rgb(255, 84, 84), rgb(255, 0, 0));
+  background-clip: text;
+  color: transparent;
+}
+
+#attunementlessButton:hover {
+  color: rgb(255, 125, 125);
+}
+#attunementlessButton:active {
+  color: rgb(255, 163, 163);
+}
+#attunementlessContainer button {
+  background: linear-gradient(to top, rgb(255, 84, 84), rgb(255, 0, 0));
+  background-clip: text;
+  color: transparent;
+}
+#attunementlessContainer button:hover {
+  color: rgb(255, 125, 125);
+}
+#attunementlessContainer button:acitve {
+  color: rgb(255, 163, 163);
+}
+
+#flameContainer button:hover {
+  color: rgb(196, 136, 24);
+}
+#frostContainer button:hover {
+  color: rgb(74, 141, 168);
+}
+#thunderContainer button:hover {
+  color: rgb(192, 192, 23);
+}
+#galeContainer button:hover {
+  color: rgb(42, 109, 42);
+}
+#ironContainer button:hover {
+  color: rgb(93, 92, 92);
+}
+
+#flameContainer button:active {
+  color: rgb(252, 187, 65);
+}
+#frostContainer button:active {
+  color: rgb(133, 214, 255);
+}
+#thunderContainer button:active {
+  color: rgb(255, 255, 125);
+}
+#galeContainer button:active {
+  color: rgb(56, 122, 52);
+}
+#ironContainer button:active {
+  color: rgb(124, 113, 113);
+}
+
+#flameButton:hover {
+  color: rgb(196, 136, 24);
+}
+#frostButton:hover {
+  color: rgb(74, 112, 168);
+}
+#thunderButton:hover {
+  color: rgb(192, 192, 23);
+}
+#galeButton:hover {
+  color: rgb(77, 152, 77);
+}
+#ironButton:hover {
+  color: rgb(93, 92, 92);
+}
+
+#flameButton:active {
+  color: rgb(252, 187, 65);
+}
+#frostButton:active {
+  color: rgb(133, 204, 255);
+}
+#thunderButton:active {
+  color: rgb(255, 255, 125);
+}
+#galeButton:active {
+  color: rgb(43, 87, 45);
+}
+#ironButton:active {
+  color: rgb(124, 113, 113);
+}
+
+#shadowButton:active {
+  color: rgb(62, 48, 48);
+}
+
+#shadowContainer button:hover {
+  color: rgb(39, 37, 37);
+}
+#shadowContainer button:active {
+  color: rgb(62, 48, 48);
+}
+#shadowButton:hover {
+  color: rgb(39, 37, 37);
+}
+
+#oathboundButton {
+  background: linear-gradient(to top, rgb(23, 7, 168), rgb(187, 186, 252));
+  background-clip: text;
+  color: transparent;
+}
+#oathboundButton:hover {
+  background: linear-gradient(to top, rgb(119, 114, 171), rgb(199, 199, 210));
+  background-clip: text;
+  color: transparent;
+}
+#oathboundButton:active {
+  background: linear-gradient(to top, rgb(66, 64, 84), rgb(61, 61, 79));
+  background-clip: text;
+  color: transparent;
+}
+
+#oathboundContainer .arc {
+  background: linear-gradient(to top, rgb(83, 57, 7), rgb(255, 196, 0));
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .arc:hover {
+  background: linear-gradient(to top, rgb(104, 92, 69),rgb(247, 221, 137));
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .arc:active {
+  background: linear-gradient(to top, rgb(59, 53, 40),rgb(73, 66, 42));
+  background-clip: text;
+  color: transparent;
+}
+
+#oathboundContainer .blindseer {
+  background: linear-gradient(to bottom, rgb(23, 7, 168), rgb(187, 186, 252));
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .blindseer:hover {
+  background: linear-gradient(to bottom, rgb(124, 117, 186),rgb(216, 216, 247));
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .blindseer:active {
+  background: linear-gradient(to bottom, rgb(69, 66, 92), rgb(69, 69, 84));
+  background-clip: text;
+  color: transparent;
+}
+
+#oathboundContainer .contractor {
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(112, 112, 112));
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .contractor:hover {
+  background: linear-gradient(to right, rgb(65, 65, 65), rgb(108, 108, 108));
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .contractor:active {
+  background: linear-gradient(to right, rgb(130, 130, 130), rgb(207, 207, 207));
+  background-clip: text;
+  color: transparent;
+}
+
+#oathboundContainer .dawnwalker {
+  background: linear-gradient(
+    to right,
+    rgb(237, 179, 255),
+    rgb(255, 255, 255),
+    rgb(152, 240, 255),
+    pink,
+    rgb(255, 150, 150)
+  );
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .dawnwalker:hover {
+  background: linear-gradient(
+    to right,
+    rgb(129, 101, 138),
+    rgb(131, 130, 130),
+    rgb(84, 133, 142),
+    rgb(123, 92, 97),
+    rgb(107, 65, 65)
+  );
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .dawnwalker:active {
+  background: linear-gradient(
+    to right,
+    rgb(187, 178, 190),
+    rgb(166, 166, 166),
+    rgb(196, 223, 228),
+    rgb(174, 161, 163),
+    rgb(223, 199, 199)
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+#oathboundContainer .fadetrimmer {
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(58, 58, 58));
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .fadetrimmer:hover {
+  background: linear-gradient(to bottom, rgb(162, 162, 162), rgb(130, 130, 130));
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .fadetrimmer:active {
+  background: linear-gradient(to bottom, rgb(57, 56, 56), rgb(64, 63, 63));
+  background-clip: text;
+  color: transparent;
+}
+
+#oathboundContainer .Jetstriker {
+  background: linear-gradient(
+    to left,
+    rgb(255, 255, 255),
+    rgb(165, 146, 146),
+    black
+  );
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .Jetstriker:hover {
+  background: linear-gradient(
+    to left,
+    rgb(162, 162, 162),
+    rgb(99, 88, 88),
+    rgb(89, 89, 89)
+  );
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .Jetstriker:Active {
+  background: linear-gradient(
+    to left,
+    rgb(53, 53, 53),
+    rgb(44, 39, 39),
+    rgb(57, 56, 56)
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+#oathboundContainer .Linkstrider {
+  background: linear-gradient(
+    to left,
+    rgb(209, 57, 255),
+    rgb(62, 28, 255),
+    rgb(0, 0, 0)
+  );
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .Linkstrider:hover {
+  background: linear-gradient(
+    to left,
+    rgb(222, 141, 247),
+    rgb(168, 155, 247),
+    rgb(123, 123, 123)
+  );
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .Linkstrider:active {
+  background: linear-gradient(
+    to left,
+    rgb(89, 62, 97),
+    rgb(70, 64, 107),
+    rgb(54, 54, 54)
+  );
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .Starkindred {
+  background: linear-gradient(
+    to right,
+    rgb(238, 251, 0),
+    rgb(176, 182, 0),
+    rgb(144, 149, 0),
+    rgb(92, 95, 0),
+    rgb(68, 75, 0)
+  );
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .Starkindred:hover {
+  background: linear-gradient(
+    to right,
+    rgb(250, 255, 162),
+    rgb(165, 167, 111),
+    rgb(138, 140, 87),
+    rgb(102, 103, 73),
+    rgb(84, 86, 66)
+  );
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .Starkindred:active {
+  background: linear-gradient(
+    to right,
+    rgb(247, 249, 221),
+    rgb(172, 172, 154),
+    rgb(145, 145, 131),
+    rgb(108, 108, 99),
+    rgb(93, 93, 93)
+  );
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .Visionshaper {
+  background: linear-gradient(
+    to left,
+    rgb(0, 0, 0),
+    rgb(54, 36, 246),
+    rgb(255, 3, 3)
+  );
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .Visionshaper:hover {
+  background: linear-gradient(
+    to left,
+    rgb(77, 77, 77),
+    rgb(122, 109, 255),
+    rgb(253, 106, 106)
+  );
+  background-clip: text;
+  color: transparent;
+}
+#oathboundContainer .Visionshaper:active {
+  background: linear-gradient(
+    to left,
+    rgb(54, 54, 54),
+    rgb(80, 78, 105),
+    rgb(71, 55, 55)
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+#monsterButton {
+  background: linear-gradient(to top, #739ca7, #172d3b);
+  background-clip: text;
+  color: transparent;
+}
+#monsterButton:hover {
+  background: linear-gradient(to top, #a4ccd7, #678699);
+  background-clip: text;
+  color: transparent;
+}
+#monsterButton:active {
+  background: linear-gradient(to top, #d3ebf2, #a3c6db);
+  background-clip: text;
+  color: transparent;
+}
+#monsterButton {
+  background: linear-gradient(to top, #739ca7, #172d3b);
+  background-clip: text;
+  color: transparent;
+}
+
+#monsterContainer button {
+  background: linear-gradient(to top, #739ca7, #172d3b);
+  background-clip: text;
+  color: transparent;
+}
+#monsterContainer button:hover {
+  background: linear-gradient(to top, #3f4f53, #1a2227);
+  background-clip: text;
+  color: transparent;
+}
+#monsterContainer button:active {
+  background: linear-gradient(to top, #252c2e, #000000);
+  background-clip: text;
+  color: transparent;
+}
+
+.rightWindow {
+  border: 5px solid transparent;
+  border-image: url("image/border.png") 45%;
+  border-image-width: 15px;
+  border-image-outset: 2px;
+  background-image: url("image/background2.png");
+}
+.rightWindow h2 {
+  font-style: italic;
+  font-size: small;
+}
+.rightWindow h1 {
+  font-style: italic;
+  font-size: larger;
+}
+.rightWindow p {
+  font-weight: bold;
+}
+.rightWindow p,
+h1,
+h2 {
+  color: rgb(211, 211, 211);
+}
+.rightWindow button {
+  display: grid;
+  grid-template-columns: repeat(1, 108px);
+  margin: auto;
+  position: bottom;
+  gap: 20px;
+  padding: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 100%;
+  color: aliceblue;
+}
+.rightWindow a {
+  text-decoration: none;
+}
+
+#leftBottomWindow {
+  border: 5px solid transparent;
+  border-image: url("image/border.png") 45%;
+  border-image-width: 15px;
+  border-image-outset: 2px;
+  background-image: url("image/background2.png");
+  height: 50%;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-text-stroke: 0.5px #040d13;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#leftBottomWindow img {
+  height: 100%;
+  width: 100%;
+}
+
+.versionBlock{
+  background-image: url("image/background.png");
+  border-image: url("image/borderthin.png") 45%;
+  border-image-width: 15px;
+  border-image-outset: 5px;
+  width: 50px;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 30px;
+  padding-left: 5px;
+  font-size: 90%;
+}
