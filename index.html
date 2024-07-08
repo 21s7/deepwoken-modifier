@@ -4,368 +4,371 @@
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="Deepwoken modifier" content="Deepwoken,deepwoken, Deepwoken modifier,deepwoken modifier" />
-    <title>Deepwoken modifiers</title>
+    <title>deepwoken modifier</title>
     <meta name="description" content="On this page you can see modifications of various mantras in a format convenient for you ">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://deepwokenmod.ru/">
     <meta property="og:title" content="deepwoken modifier">
     <meta property="og:description" content="On this page you can see modifications of various mantras in a format convenient">
     <meta property="og:image" content="image/deepwokenLogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">  
     <link rel="icon" href="image/ico.png" type="image/png">
   </head>
   <body>
     <div class="versionBlock">
-      <h2>V1.1</h2>
+      <h2>V1.2</h2>
     </div>
-    <div class="mainContainer">
-      <div class="topContainer">
-        <button id="mantraButton" onclick="caseAction('mod')">mantra modification</button>
-        <button id="effectButton" onclick="caseAction('effect')">modification effect</button>
-        <button id="levelingButton" onclick="caseAction('leveling')">leveling effect</button>
-      </div>  
-      <div class="leftContainer">
-        <div class="leftWindow">
-          <button id="flameButton" onclick="toggleContainer('flameContainer')">flamecharm</button>
-          <div id="flameContainer" class="hidden">
-            <button onclick="handleItemClick('Fire Blade')">Fire Blade</button>
-                    <button onclick="handleItemClick('Flame Repulsion')">Flame Repulsion</button>
-                    <button onclick="handleItemClick('Burning Servants')">Burning Servants</button>
-                    <button onclick="handleItemClick('Flame Grab')">Flame Grab</button>
-                    <button onclick="handleItemClick('Fire gun')">Fire gun</button>
-                    <button onclick="handleItemClick('Flame Blind')">Flame Blind</button>
-                    <button onclick="handleItemClick('Fire Palm')">Fire Palm★</button>
-                    <button onclick="handleItemClick('Fire Eruption')">Fire Eruption★</button>
-                    <button onclick="handleItemClick('Fire Forge')">Fire Forge★</button>
-                    <button onclick="handleItemClick('Relentless Flames')">Relentless Flames★★</button>
-                    <button onclick="handleItemClick('Flame Sentinel')">Flame Sentinel★★</button>
-                    <button onclick="handleItemClick('Rising Flame')">Rising Flame★★</button>
-                    <button onclick="handleItemClick('Ash Slam')">Ash Slam★★★</button>
-                    <button onclick="handleItemClick('Flame Ballista')">Flame Ballista★★★</button>
-                    <button onclick="handleItemClick('Flaming Scourge')">Flaming Scourge★★★</button>
-                    <button onclick="handleItemClick('Flame Leap')">Flame Leap★★</button>
-                    <button onclick="handleItemClick('Flame Assault')">Flame Assault★★</button>
-                    <button onclick="handleItemClick('Flame Wisp')">Flame Wisp★★</button>
-                    <button onclick="handleItemClick('Graceful Flame')">Graceful Flame★</button>
-                    <button onclick="handleItemClick('Flame of Denial')">Flame of Denial</button>
-          </div>
-          <button id="thunderButton" onclick="toggleContainer('thunderContainer')">thundercall</button>
-          <div id="thunderContainer" class="hidden">
-            <button onclick="handleItemClick('Lightning Blade')">Lightning Blade</button>
-                    <button onclick="handleItemClick('Jolt Grab')">Jolt Grab</button>
-                    <button onclick="handleItemClick('Lightning Beam')">Lightning Beam</button>
-                    <button onclick="handleItemClick('Electro Carve')">Electro Carve</button>
-                    <button onclick="handleItemClick('Fleeting Sparks')">Fleeting Sparks★</button>
-                    <button onclick="handleItemClick('Lightning Impact')">Lightning Impact★</button>
-                    <button onclick="handleItemClick('Lightning Clones')">Lightning Clones★</button>
-                    <button onclick="handleItemClick('Lightning Strike')">Lightning Strike★</button>
-                    <button onclick="handleItemClick('Thunder Kick')">Thunder Kick★</button>
-                    <button onclick="handleItemClick('Storm Blades')">Storm Blades★★</button>
-                    <button onclick="handleItemClick('Grand Javelin')">Grand Javelin★★</button>
-                    <button onclick="handleItemClick('Bolt Piercer')">Bolt Piercer★★</button>
-                    <button onclick="handleItemClick('Emotion Wave')">Emotion Wave★★★</button>
-                    <button onclick="handleItemClick('Lightning Stream')">Lightning Stream★</button>
-                    <button onclick="handleItemClick('Thunder Wisp')">Thunder Wisp★★</button>
-                    <button onclick="handleItemClick('Spark Swap')">Spark Swap★★★</button>
-                    <button onclick="handleItemClick('Lightning Assault')">Lightning Assault★★</button>
-                    <button onclick="handleItemClick('Lightning Cloak')">Lightning Cloak★★★</button>
-                    <button onclick="handleItemClick('Rising Thunder')">Rising Thunder★★★</button>
-          </div>
-          <button id="frostButton" onclick="toggleContainer('frostContainer')">frostdraw</button>
-          <div id="frostContainer" class="hidden">
-            <button onclick="handleItemClick('Ice Spikes')">Ice Spikes</button>
-            <button onclick="handleItemClick('Ice Beam')">Ice Beam</button>
-            <button onclick="handleItemClick('Warden\'s Blades')">Warden's Blades</button>
-            <button onclick="handleItemClick('Frozen Servants')">Frozen Servants</button>
-            <button onclick="handleItemClick('Ice Daggers')">Ice Daggers★</button>
-            <button onclick="handleItemClick('Ice Blade')">Ice Blade★</button>
-            <button onclick="handleItemClick('Ice Chain')">Ice Chain★</button>
-            <button onclick="handleItemClick('Ice Eruption')">Ice Eruption★</button>
-            <button onclick="handleItemClick('Ice Forge')">Ice Forge★</button>
-            <button onclick="handleItemClick('Ice Smash')">Ice Smash★</button>
-            <button onclick="handleItemClick('Ice Lance')">Ice Lance★★</button>
-            <button onclick="handleItemClick('Rising Frost')">Rising Frost★★</button>
-            <button onclick="handleItemClick('Ice Flock')">Ice Flock★★</button>
-            <button onclick="handleItemClick('Ice Carve')">Ice Carve★★</button>
-            <button onclick="handleItemClick('Frost Grab')">Frost Grab★★</button>
-            <button onclick="handleItemClick('Ice Cubes')">Ice Cubes★★★</button>
-            <button onclick="handleItemClick('Ice Fissure')">Ice Fissure★★★</button>
-            <button onclick="handleItemClick('Glacial Arc')">Glacial Arc★</button>
-            <button onclick="handleItemClick('Ice Skate')">Ice Skate★★★</button>
-            <button onclick="handleItemClick('Frost Wisp')">Frost Wisp★★</button>
-            <button onclick="handleItemClick('Iceberg')">Iceberg★★★</button>
-          </div>
-          <button id="galeButton" onclick="toggleContainer('galeContainer')">galebreath</button>
-          <div id="galeContainer" class="hidden">
-              <button onclick="handleItemClick('Air Force')">Air Force</button>
-              <button onclick="handleItemClick('Wind Blade')">Wind Blade</button>
-              <button onclick="handleItemClick('Tornado Kick')">Tornado Kick</button>
-              <button onclick="handleItemClick('Gale Lunge')">Gale Lunge★</button>
-              <button onclick="handleItemClick('Tornado')">Tornado★</button>
-              <button onclick="handleItemClick('Heavenly Wind')">Heavenly Wind★</button>
-              <button onclick="handleItemClick('Galetrap')">Galetrap★</button>
-              <button onclick="handleItemClick('Gale Punch')">Gale Punch★</button>
-              <button onclick="handleItemClick('Wind Forge')">Wind Forge★</button>
-              <button onclick="handleItemClick('Twister Kicks')">Twister Kicks★</button>
-              <button onclick="handleItemClick('Champion\'s Whirlthrow')">Champion's Whirlthrow★★</button>
-              <button onclick="handleItemClick('Rising Wind')">Rising Wind★★</button>
-              <button onclick="handleItemClick('Wind Gun')">Wind Gun★★</button>
-              <button onclick="handleItemClick('Wind Carve')">Wind Carve★★</button>
-              <button onclick="handleItemClick('Astral Wind')">Astral Wind★★★</button>
-              <button onclick="handleItemClick('Pillars of Erisia')">Pillars of Erisia★★★</button>
-              <button onclick="handleItemClick('Wind Passage')">Wind Passage★★★</button>
-              <button onclick="handleItemClick('Gale Wisp')">Gale Wisp★★</button>
-          </div>
-          <button id="shadowButton" onclick="toggleContainer('shadowContainer')">shadowcast</button>
-          <div id="shadowContainer" class="hidden">
-              <button onclick="handleItemClick('Dark Blade')">Dark Blade</button>
-              <button onclick="handleItemClick('Shadow Gun')">Shadow Gun</button>
-              <button onclick="handleItemClick('Clutching Shadow')">Clutching Shadow</button>
-              <button onclick="handleItemClick('Shadow Eruption')">Shadow Eruption</button>
-              <button onclick="handleItemClick('Shadow Seekers')">Shadow Seekers★</button>
-              <button onclick="handleItemClick('Shadow Chains')">Shadow Chains★</button>
-              <button onclick="handleItemClick('Encircle')">Encircle★</button>
-              <button onclick="handleItemClick('Shade Devour')">Shade Devour★</button>
-              <button onclick="handleItemClick('Shadow Roar')">Shadow Roar★★</button>
-              <button onclick="handleItemClick('Rising Shadow')">Rising Shadow</button>
-              <button onclick="handleItemClick('Shadow Meteor')">Shadow Meteor★</button>
-              <button onclick="handleItemClick('Devouring Eye')">Devouring Eye★★</button>
-              <button onclick="handleItemClick('Shade Wisp')">Shade Wisp★★</button>
-              <button onclick="handleItemClick('Shadow Assault')">Shadow Assault★★</button>
-              <button onclick="handleItemClick('Eclipse Kick')">Eclipse Kick★★★</button>
-              <button onclick="handleItemClick('Shade Bringer')">Shade Bringer★★★</button>
-              <button onclick="handleItemClick('Shadow Vortex')">Shadow Vortex★★★</button>
-          </div>
-          <button id="ironButton" onclick="toggleContainer('ironContainer')">ironsing</button>
-          <div id="ironContainer" class="hidden">
-              <button onclick="handleItemClick('Metal Eruption')">Metal Eruption</button>
-              <button onclick="handleItemClick('Needle Barrage')">Needle Barrage</button>
-              <button onclick="handleItemClick('Metal Rampart')">Metal Rampart</button>
-              <button onclick="handleItemClick('Metal Kick')">Metal Rampart★</button>
-              <button onclick="handleItemClick('Iron Skin')">Iron Skin★</button>
-              <button onclick="handleItemClick('Chain Pull')">Chain Pull★</button>
-              <button onclick="handleItemClick('Metal Rain')">Metal Rain★★</button>
-              <button onclick="handleItemClick('Caltrops')">Caltrops★★</button>
-              <button onclick="handleItemClick('Firing Line')">Firing Line★★</button>
-              <button onclick="handleItemClick('Metal Fakeout')">Metal Fakeout★★</button>
-              <button onclick="handleItemClick('Oxidizing Rush')">Oxidizing Rush★★</button>
-              <button onclick="handleItemClick('Metal Ball')">Metal Ball★★</button>
-              <button onclick="handleItemClick('Metal Wisp')">Metal Wisp★★</button>
-              <button onclick="handleItemClick('Metal Armament')">Metal Armament★★★</button>
-              <button onclick="handleItemClick('Metal Gatling')">Metal Gatling★★★</button>
-              <button onclick="handleItemClick('Iron Slam')">Iron Slam★★★</button>
-              <button onclick="handleItemClick('Iron Hug')">Iron Hug★★★</button>
-              <button onclick="handleItemClick('Rocket Lance')">Rocket Lance★★★</button>
-          </div>
-          <button id="hybridButton" onclick="toggleContainer('hybridContainer')">hybrid</button>
-          <div id="hybridContainer" class="hidden">
-            <button id="flmThn"   onclick="handleItemClick('Flashfire Sweep')">Flashfire Sweep (FLM+THN)</button>
-              <button id="mtlThn" onclick="handleItemClick('Iron Tether')">Iron Tether (MTL+THN)</button>
-              <button id="sdwFst"  onclick="handleItemClick('Permafrost Prison★')">Permafrost Prison (SDW+FST)</button>
-              <button id="thnGle" onclick="handleItemClick('Tempest Blitz★')">Tempest Blitz (THN+GLE)</button> 
-          </div>
-          <button id="attunementlessButton" onclick="toggleContainer('attunementlessContainer')">attunementless</button>
-          <div id="attunementlessContainer" class="hidden">
-            <button onclick="handleItemClick('STRONG LEFT')">STRONG LEFT (STR)</button>
-              <button onclick="handleItemClick('Rapid Punches')">Rapid Punches (STR)</button>
-              <button onclick="handleItemClick('Skyshatter Kick')">Skyshatter Kick (STR)</button>
-              <button onclick="handleItemClick('Karita Leap')">Karita Leap (Jus Karita)
-              </button> 
-              <button onclick="handleItemClick('Karita Divebomb')">Karita Divebomb (Jus Karita)
+    <div class="wrapper">
+      <div class="mainContainer">
+        <div class="topContainer">
+          <button id="mantraButton" onclick="caseAction('mod')">mantra modification</button>
+          <button id="effectButton" onclick="caseAction('effect')">modification effect</button>
+          <button id="levelingButton" onclick="caseAction('leveling')">leveling effect</button>
+        </div>  
+        <div class="leftContainer">
+          <div class="leftWindow">
+            <button id="flameButton" onclick="toggleContainer('flameContainer')">flamecharm</button>
+            <div id="flameContainer" class="hidden">
+              <button onclick="handleItemClick('Fire Blade')">Fire Blade</button>
+                      <button onclick="handleItemClick('Flame Repulsion')">Flame Repulsion</button>
+                      <button onclick="handleItemClick('Burning Servants')">Burning Servants</button>
+                      <button onclick="handleItemClick('Flame Grab')">Flame Grab</button>
+                      <button onclick="handleItemClick('Fire gun')">Fire gun</button>
+                      <button onclick="handleItemClick('Flame Blind')">Flame Blind</button>
+                      <button onclick="handleItemClick('Fire Palm')">Fire Palm★</button>
+                      <button onclick="handleItemClick('Fire Eruption')">Fire Eruption★</button>
+                      <button onclick="handleItemClick('Fire Forge')">Fire Forge★</button>
+                      <button onclick="handleItemClick('Relentless Flames')">Relentless Flames★★</button>
+                      <button onclick="handleItemClick('Flame Sentinel')">Flame Sentinel★★</button>
+                      <button onclick="handleItemClick('Rising Flame')">Rising Flame★★</button>
+                      <button onclick="handleItemClick('Ash Slam')">Ash Slam★★★</button>
+                      <button onclick="handleItemClick('Flame Ballista')">Flame Ballista★★★</button>
+                      <button onclick="handleItemClick('Flaming Scourge')">Flaming Scourge★★★</button>
+                      <button onclick="handleItemClick('Flame Leap')">Flame Leap★★</button>
+                      <button onclick="handleItemClick('Flame Assault')">Flame Assault★★</button>
+                      <button onclick="handleItemClick('Flame Wisp')">Flame Wisp★★</button>
+                      <button onclick="handleItemClick('Graceful Flame')">Graceful Flame★</button>
+                      <button onclick="handleItemClick('Flame of Denial')">Flame of Denial</button>
+            </div>
+            <button id="thunderButton" onclick="toggleContainer('thunderContainer')">thundercall</button>
+            <div id="thunderContainer" class="hidden">
+              <button onclick="handleItemClick('Lightning Blade')">Lightning Blade</button>
+                      <button onclick="handleItemClick('Jolt Grab')">Jolt Grab</button>
+                      <button onclick="handleItemClick('Lightning Beam')">Lightning Beam</button>
+                      <button onclick="handleItemClick('Electro Carve')">Electro Carve</button>
+                      <button onclick="handleItemClick('Fleeting Sparks')">Fleeting Sparks★</button>
+                      <button onclick="handleItemClick('Lightning Impact')">Lightning Impact★</button>
+                      <button onclick="handleItemClick('Lightning Clones')">Lightning Clones★</button>
+                      <button onclick="handleItemClick('Lightning Strike')">Lightning Strike★</button>
+                      <button onclick="handleItemClick('Thunder Kick')">Thunder Kick★</button>
+                      <button onclick="handleItemClick('Storm Blades')">Storm Blades★★</button>
+                      <button onclick="handleItemClick('Grand Javelin')">Grand Javelin★★</button>
+                      <button onclick="handleItemClick('Bolt Piercer')">Bolt Piercer★★</button>
+                      <button onclick="handleItemClick('Emotion Wave')">Emotion Wave★★★</button>
+                      <button onclick="handleItemClick('Lightning Stream')">Lightning Stream★</button>
+                      <button onclick="handleItemClick('Thunder Wisp')">Thunder Wisp★★</button>
+                      <button onclick="handleItemClick('Spark Swap')">Spark Swap★★★</button>
+                      <button onclick="handleItemClick('Lightning Assault')">Lightning Assault★★</button>
+                      <button onclick="handleItemClick('Lightning Cloak')">Lightning Cloak★★★</button>
+                      <button onclick="handleItemClick('Rising Thunder')">Rising Thunder★★★</button>
+            </div>
+            <button id="frostButton" onclick="toggleContainer('frostContainer')">frostdraw</button>
+            <div id="frostContainer" class="hidden">
+              <button onclick="handleItemClick('Ice Spikes')">Ice Spikes</button>
+              <button onclick="handleItemClick('Ice Beam')">Ice Beam</button>
+              <button onclick="handleItemClick('Warden\'s Blades')">Warden's Blades</button>
+              <button onclick="handleItemClick('Frozen Servants')">Frozen Servants</button>
+              <button onclick="handleItemClick('Ice Daggers')">Ice Daggers★</button>
+              <button onclick="handleItemClick('Ice Blade')">Ice Blade★</button>
+              <button onclick="handleItemClick('Ice Chain')">Ice Chain★</button>
+              <button onclick="handleItemClick('Ice Eruption')">Ice Eruption★</button>
+              <button onclick="handleItemClick('Ice Forge')">Ice Forge★</button>
+              <button onclick="handleItemClick('Ice Smash')">Ice Smash★</button>
+              <button onclick="handleItemClick('Ice Lance')">Ice Lance★★</button>
+              <button onclick="handleItemClick('Rising Frost')">Rising Frost★★</button>
+              <button onclick="handleItemClick('Ice Flock')">Ice Flock★★</button>
+              <button onclick="handleItemClick('Ice Carve')">Ice Carve★★</button>
+              <button onclick="handleItemClick('Frost Grab')">Frost Grab★★</button>
+              <button onclick="handleItemClick('Ice Cubes')">Ice Cubes★★★</button>
+              <button onclick="handleItemClick('Ice Fissure')">Ice Fissure★★★</button>
+              <button onclick="handleItemClick('Glacial Arc')">Glacial Arc★</button>
+              <button onclick="handleItemClick('Ice Skate')">Ice Skate★★★</button>
+              <button onclick="handleItemClick('Frost Wisp')">Frost Wisp★★</button>
+              <button onclick="handleItemClick('Iceberg')">Iceberg★★★</button>
+            </div>
+            <button id="galeButton" onclick="toggleContainer('galeContainer')">galebreath</button>
+            <div id="galeContainer" class="hidden">
+                <button onclick="handleItemClick('Air Force')">Air Force</button>
+                <button onclick="handleItemClick('Wind Blade')">Wind Blade</button>
+                <button onclick="handleItemClick('Tornado Kick')">Tornado Kick</button>
+                <button onclick="handleItemClick('Gale Lunge')">Gale Lunge★</button>
+                <button onclick="handleItemClick('Tornado')">Tornado★</button>
+                <button onclick="handleItemClick('Heavenly Wind')">Heavenly Wind★</button>
+                <button onclick="handleItemClick('Galetrap')">Galetrap★</button>
+                <button onclick="handleItemClick('Gale Punch')">Gale Punch★</button>
+                <button onclick="handleItemClick('Wind Forge')">Wind Forge★</button>
+                <button onclick="handleItemClick('Twister Kicks')">Twister Kicks★</button>
+                <button onclick="handleItemClick('Champion\'s Whirlthrow')">Champion's Whirlthrow★★</button>
+                <button onclick="handleItemClick('Rising Wind')">Rising Wind★★</button>
+                <button onclick="handleItemClick('Wind Gun')">Wind Gun★★</button>
+                <button onclick="handleItemClick('Wind Carve')">Wind Carve★★</button>
+                <button onclick="handleItemClick('Astral Wind')">Astral Wind★★★</button>
+                <button onclick="handleItemClick('Pillars of Erisia')">Pillars of Erisia★★★</button>
+                <button onclick="handleItemClick('Wind Passage')">Wind Passage★★★</button>
+                <button onclick="handleItemClick('Gale Wisp')">Gale Wisp★★</button>
+            </div>
+            <button id="shadowButton" onclick="toggleContainer('shadowContainer')">shadowcast</button>
+            <div id="shadowContainer" class="hidden">
+                <button onclick="handleItemClick('Dark Blade')">Dark Blade</button>
+                <button onclick="handleItemClick('Shadow Gun')">Shadow Gun</button>
+                <button onclick="handleItemClick('Clutching Shadow')">Clutching Shadow</button>
+                <button onclick="handleItemClick('Shadow Eruption')">Shadow Eruption</button>
+                <button onclick="handleItemClick('Shadow Seekers')">Shadow Seekers★</button>
+                <button onclick="handleItemClick('Shadow Chains')">Shadow Chains★</button>
+                <button onclick="handleItemClick('Encircle')">Encircle★</button>
+                <button onclick="handleItemClick('Shade Devour')">Shade Devour★</button>
+                <button onclick="handleItemClick('Shadow Roar')">Shadow Roar★★</button>
+                <button onclick="handleItemClick('Rising Shadow')">Rising Shadow</button>
+                <button onclick="handleItemClick('Shadow Meteor')">Shadow Meteor★</button>
+                <button onclick="handleItemClick('Devouring Eye')">Devouring Eye★★</button>
+                <button onclick="handleItemClick('Shade Wisp')">Shade Wisp★★</button>
+                <button onclick="handleItemClick('Shadow Assault')">Shadow Assault★★</button>
+                <button onclick="handleItemClick('Eclipse Kick')">Eclipse Kick★★★</button>
+                <button onclick="handleItemClick('Shade Bringer')">Shade Bringer★★★</button>
+                <button onclick="handleItemClick('Shadow Vortex')">Shadow Vortex★★★</button>
+            </div>
+            <button id="ironButton" onclick="toggleContainer('ironContainer')">ironsing</button>
+            <div id="ironContainer" class="hidden">
+                <button onclick="handleItemClick('Metal Eruption')">Metal Eruption</button>
+                <button onclick="handleItemClick('Needle Barrage')">Needle Barrage</button>
+                <button onclick="handleItemClick('Metal Rampart')">Metal Rampart</button>
+                <button onclick="handleItemClick('Metal Kick')">Metal Rampart★</button>
+                <button onclick="handleItemClick('Iron Skin')">Iron Skin★</button>
+                <button onclick="handleItemClick('Chain Pull')">Chain Pull★</button>
+                <button onclick="handleItemClick('Metal Rain')">Metal Rain★★</button>
+                <button onclick="handleItemClick('Caltrops')">Caltrops★★</button>
+                <button onclick="handleItemClick('Firing Line')">Firing Line★★</button>
+                <button onclick="handleItemClick('Metal Fakeout')">Metal Fakeout★★</button>
+                <button onclick="handleItemClick('Oxidizing Rush')">Oxidizing Rush★★</button>
+                <button onclick="handleItemClick('Metal Ball')">Metal Ball★★</button>
+                <button onclick="handleItemClick('Metal Wisp')">Metal Wisp★★</button>
+                <button onclick="handleItemClick('Metal Armament')">Metal Armament★★★</button>
+                <button onclick="handleItemClick('Metal Gatling')">Metal Gatling★★★</button>
+                <button onclick="handleItemClick('Iron Slam')">Iron Slam★★★</button>
+                <button onclick="handleItemClick('Iron Hug')">Iron Hug★★★</button>
+                <button onclick="handleItemClick('Rocket Lance')">Rocket Lance★★★</button>
+            </div>
+            <button id="hybridButton" onclick="toggleContainer('hybridContainer')">hybrid</button>
+            <div id="hybridContainer" class="hidden">
+              <button id="flmThn"   onclick="handleItemClick('Flashfire Sweep')">Flashfire Sweep (FLM+THN)</button>
+                <button id="mtlThn" onclick="handleItemClick('Iron Tether')">Iron Tether (MTL+THN)</button>
+                <button id="sdwFst"  onclick="handleItemClick('Permafrost Prison★')">Permafrost Prison (SDW+FST)</button>
+                <button id="thnGle" onclick="handleItemClick('Tempest Blitz★')">Tempest Blitz (THN+GLE)</button> 
+            </div>
+            <button id="attunementlessButton" onclick="toggleContainer('attunementlessContainer')">attunementless</button>
+            <div id="attunementlessContainer" class="hidden">
+              <button onclick="handleItemClick('STRONG LEFT')">STRONG LEFT (STR)</button>
+                <button onclick="handleItemClick('Rapid Punches')">Rapid Punches (STR)</button>
+                <button onclick="handleItemClick('Skyshatter Kick')">Skyshatter Kick (STR)</button>
+                <button onclick="handleItemClick('Karita Leap')">Karita Leap (Jus Karita)
+                </button> 
+                <button onclick="handleItemClick('Karita Divebomb')">Karita Divebomb (Jus Karita)
+                </button>
+                <button onclick="handleItemClick('Tacet Drop Kick')">Tacet Drop Kick (Jus Karita + STR)
+                </button>
+                <button onclick="handleItemClick('Rally')">Rally (FTD + Shield)
+                </button> 
+                <button onclick="handleItemClick('Reinforce')">Reinforce (FTD)
+                </button> 
+                <button onclick="handleItemClick('Brace')">Brace (FTD)
+  
+                </button> 
+                <button onclick="handleItemClick('Shoulder Bash')">Shoulder Bash (FTD)
+  
+                </button> 
+                <button onclick="handleItemClick('Dash')">Dash (AGI)
+  
+                </button> 
+                <button onclick="handleItemClick('Revenge')">Revenge (AGI)
+  
+                </button> 
+                <button onclick="handleItemClick('Adrenaline Surge')">Adrenaline Surge (AGI)
+  
+                </button> 
+                <button onclick="handleItemClick('Summon Cauldron')">Summon Cauldron (IN  T)
+  
+                </button> 
+                <button onclick="handleItemClick('Prediction')">Prediction (INT)
+  
+                </button> 
+                <button onclick="handleItemClick('Gaze')">Gaze (WLP)
+  
+                </button> 
+                <button onclick="handleItemClick('Glare')">Glare (WLP)
+  
+  
+                </button> 
+                <button onclick="handleItemClick('Exhaustion Strike')">Exhaustion Strike (WLP)
+  
+  
+                </button> 
+                <button onclick="handleItemClick('Taunt')">Taunt (CHR)
+  
+  
+                </button> 
+                <button onclick="handleItemClick('Sing')">Sing (CHR)
+  
+  
+                </button> 
+                <button onclick="handleItemClick('Disguise')">Disguise (Quest talent) (CHR)
+  
+  
+                </button> 
+                <button onclick="handleItemClick('Rapid Slashes')">Rapid Slashes (LHT)
+  
+  
+                </button> 
+                <button onclick="handleItemClick('Ceaseless Slashes')">Ceaseless Slashes (LHT)
+  
+  
+                </button> 
+                <button onclick="handleItemClick('Master/s Flourish')">Master's Flourish (MED)
+  
+  
+                </button> 
+                <button onclick="handleItemClick('Twincleave')">Twincleave (MED)
+  
+  
+                </button> 
+                <button onclick="handleItemClick('Prominence Draw')">Prominence Draw (MED)
+  
+  
+  
+                </button> 
+                <button onclick="handleItemClick('Flashdraw Strike')">Flashdraw Strike (MED+AGI)
+                </button> 
+                <button onclick="handleItemClick('Pressure Blast')">Pressure Blast (HVY)
+                </button> 
+                <button onclick="handleItemClick('Punishment')">Punishment (HVY)
+  
+  
+  
+                </button> 
+                <button onclick="handleItemClick('Onslaught')">Onslaught (HVY)
+  
+  
+  
+                </button> 
+                
+            </div>
+  
+            <button id="oathboundButton" onclick="toggleContainer('oathboundContainer')"> oathbound</button>
+            <div id="oathboundContainer" class="hidden">
+              <button class="arc"   onclick="handleItemClick('Arc Suit')">Arc Suit (Arcwarder)
               </button>
-              <button onclick="handleItemClick('Tacet Drop Kick')">Tacet Drop Kick (Jus Karita + STR)
+              <button class="arc" onclick="handleItemClick('Arc Beam')">Arc Beam (Arcwarder)
               </button>
-              <button onclick="handleItemClick('Rally')">Rally (FTD + Shield)
-              </button> 
-              <button onclick="handleItemClick('Reinforce')">Reinforce (FTD)
-              </button> 
-              <button onclick="handleItemClick('Brace')">Brace (FTD)
-
-              </button> 
-              <button onclick="handleItemClick('Shoulder Bash')">Shoulder Bash (FTD)
-
-              </button> 
-              <button onclick="handleItemClick('Dash')">Dash (AGI)
-
-              </button> 
-              <button onclick="handleItemClick('Revenge')">Revenge (AGI)
-
-              </button> 
-              <button onclick="handleItemClick('Adrenaline Surge')">Adrenaline Surge (AGI)
-
-              </button> 
-              <button onclick="handleItemClick('Summon Cauldron')">Summon Cauldron (IN  T)
-
-              </button> 
-              <button onclick="handleItemClick('Prediction')">Prediction (INT)
-
-              </button> 
-              <button onclick="handleItemClick('Gaze')">Gaze (WLP)
-
-              </button> 
-              <button onclick="handleItemClick('Glare')">Glare (WLP)
-
-
-              </button> 
-              <button onclick="handleItemClick('Exhaustion Strike')">Exhaustion Strike (WLP)
-
-
-              </button> 
-              <button onclick="handleItemClick('Taunt')">Taunt (CHR)
-
-
-              </button> 
-              <button onclick="handleItemClick('Sing')">Sing (CHR)
-
-
-              </button> 
-              <button onclick="handleItemClick('Disguise')">Disguise (Quest talent) (CHR)
-
-
-              </button> 
-              <button onclick="handleItemClick('Rapid Slashes')">Rapid Slashes (LHT)
-
-
-              </button> 
-              <button onclick="handleItemClick('Ceaseless Slashes')">Ceaseless Slashes (LHT)
-
-
-              </button> 
-              <button onclick="handleItemClick('Master/s Flourish')">Master's Flourish (MED)
-
-
-              </button> 
-              <button onclick="handleItemClick('Twincleave')">Twincleave (MED)
-
-
-              </button> 
-              <button onclick="handleItemClick('Prominence Draw')">Prominence Draw (MED)
-
-
-
-              </button> 
-              <button onclick="handleItemClick('Flashdraw Strike')">Flashdraw Strike (MED+AGI)
-              </button> 
-              <button onclick="handleItemClick('Pressure Blast')">Pressure Blast (HVY)
-              </button> 
-              <button onclick="handleItemClick('Punishment')">Punishment (HVY)
-
-
-
-              </button> 
-              <button onclick="handleItemClick('Onslaught')">Onslaught (HVY)
-
-
-
-              </button> 
-              
+              <button class="arc" onclick="handleItemClick('Arc Wave')">Arc Wave (Arcwarder)
+              </button>
+              <button class="blindseer" onclick="handleItemClick('Mindsoothe')">Mindsoothe (Blindseer)
+              </button>
+              <button class="blindseer" onclick="handleItemClick('Tranquil Circle')">Tranquil Circle (Blindseer)
+              </button>
+              <button  class="blindseer" onclick="handleItemClick('Sightless Beam')">Sightless Beam (Blindseer)
+              </button>
+              <button class="contractor" onclick="handleItemClick('Equalizer')">Equalizer (Contractor)
+              </button>
+              <button class="contractor" onclick="handleItemClick('Lord/s Slice')">Lord's Slice (Contractor)
+              </button>
+              <button class="contractor" onclick="handleItemClick('Judgement')">Judgement (Contractor)
+              </button>
+              <button class="dawnwalker" onclick="handleItemClick('Radiant Kick')">Radiant Kick (Dawnwalker)
+              </button>
+              <button class="dawnwalker" onclick="handleItemClick('Blinding Dawn')">Blinding Dawn (Dawnwalker)
+              </button>
+              <button class="dawnwalker" onclick="handleItemClick('Radiant Dawn')">Radiant Dawn (Dawnwalker)
+              </button>
+              <button class="fadetrimmer" onclick="handleItemClick('Precision Cuts')">Precision Cuts (Fadetrimmer)
+              </button>
+              <button class="fadetrimmer" onclick="handleItemClick('Close Shave')">Close Shave (Fadetrimmer)
+              </button>
+              <button class="Jetstriker" onclick="handleItemClick('Fake Strike')">Fake Strike (Jetstriker)
+              </button>
+              <button class="Jetstriker" onclick="handleItemClick('Jet Kick ')">Jet Kick (Jetstriker)
+              </button>
+              <button class="Linkstrider" onclick="handleItemClick('Symbiotic Sustain')">Symbiotic Sustain (Linkstrider)
+              </button>
+              <button class="Linkstrider" onclick="handleItemClick('Symbiotic Link')">Symbiotic Link (Linkstrider)
+              </button>
+              <button class="Linkstrider" onclick="handleItemClick('Parasitic Leech')">Parasitic Leech (Linkstrider)
+              </button>
+            </button>
+            <button class="Starkindred" onclick="handleItemClick('Ascension')">Ascension (Starkindred)
+  
+            </button>
+            <button class="Starkindred" onclick="handleItemClick('Sinister Halo')">Sinister Halo (Starkindred)
+  
+            </button>
+            <button class="Starkindred" onclick="handleItemClick('Celestial Assault')">Celestial Assault (Starkindred)
+  
+            </button>
+            <button class="Visionshaper" onclick="handleItemClick('Illusory Counter')">Illusory Counter (Visionshaper)
+  
+            </button>
+            <button class="Visionshaper" onclick="handleItemClick('Illusory Realm')">Illusory Realm (Visionshaper)
+  
+            </button>
+            <button class="Visionshaper" onclick="handleItemClick('Illusory Servants')">Illusory Servants (Visionshaper)</button>
+            </div>
+  
+            <button id="monsterButton" onclick="toggleContainer('monsterContainer')">monster mantras</button>
+            <div id="monsterContainer" class="hidden">
+                <button onclick="handleItemClick('Brachial Spear')">Brachial Spear (Bonekeeper)
+                </button>
+                <button onclick="handleItemClick('Coral Spear')">Coral Spear (Megalodaunt)
+                </button>
+                <button onclick="handleItemClick('Dread Breath')">Dread Breath (Dread Serpent)
+                </button>
+                <button onclick="handleItemClick('Beast Burrow')">Beast Burrow (Thresher)
+                </button>
+                <button onclick="handleItemClick('Enforcer Pull')">Enforcer Pull (Enforcer)
+                </button>
+                <button onclick="handleItemClick('Mecha Gatling')">Mecha Gatling (Mechalodaunt)
+                </button>
+                <button onclick="handleItemClick('Abyssal Ridge')">Abyssal Ridge (Nautilodaunt)
+                  (Terrapod)
+                </button>
+                
+            </div>
+  
+          
+  
           </div>
-
-          <button id="oathboundButton" onclick="toggleContainer('oathboundContainer')"> oathbound</button>
-          <div id="oathboundContainer" class="hidden">
-            <button class="arc"   onclick="handleItemClick('Arc Suit')">Arc Suit (Arcwarder)
-            </button>
-            <button class="arc" onclick="handleItemClick('Arc Beam')">Arc Beam (Arcwarder)
-            </button>
-            <button class="arc" onclick="handleItemClick('Arc Wave')">Arc Wave (Arcwarder)
-            </button>
-            <button class="blindseer" onclick="handleItemClick('Mindsoothe')">Mindsoothe (Blindseer)
-            </button>
-            <button class="blindseer" onclick="handleItemClick('Tranquil Circle')">Tranquil Circle (Blindseer)
-            </button>
-            <button  class="blindseer" onclick="handleItemClick('Sightless Beam')">Sightless Beam (Blindseer)
-            </button>
-            <button class="contractor" onclick="handleItemClick('Equalizer')">Equalizer (Contractor)
-            </button>
-            <button class="contractor" onclick="handleItemClick('Lord/s Slice')">Lord's Slice (Contractor)
-            </button>
-            <button class="contractor" onclick="handleItemClick('Judgement')">Judgement (Contractor)
-            </button>
-            <button class="dawnwalker" onclick="handleItemClick('Radiant Kick')">Radiant Kick (Dawnwalker)
-            </button>
-            <button class="dawnwalker" onclick="handleItemClick('Blinding Dawn')">Blinding Dawn (Dawnwalker)
-            </button>
-            <button class="dawnwalker" onclick="handleItemClick('Radiant Dawn')">Radiant Dawn (Dawnwalker)
-            </button>
-            <button class="fadetrimmer" onclick="handleItemClick('Precision Cuts')">Precision Cuts (Fadetrimmer)
-            </button>
-            <button class="fadetrimmer" onclick="handleItemClick('Close Shave')">Close Shave (Fadetrimmer)
-            </button>
-            <button class="Jetstriker" onclick="handleItemClick('Fake Strike')">Fake Strike (Jetstriker)
-            </button>
-            <button class="Jetstriker" onclick="handleItemClick('Jet Kick ')">Jet Kick (Jetstriker)
-            </button>
-            <button class="Linkstrider" onclick="handleItemClick('Symbiotic Sustain')">Symbiotic Sustain (Linkstrider)
-            </button>
-            <button class="Linkstrider" onclick="handleItemClick('Symbiotic Link')">Symbiotic Link (Linkstrider)
-            </button>
-            <button class="Linkstrider" onclick="handleItemClick('Parasitic Leech')">Parasitic Leech (Linkstrider)
-            </button>
-          </button>
-          <button class="Starkindred" onclick="handleItemClick('Ascension')">Ascension (Starkindred)
-
-          </button>
-          <button class="Starkindred" onclick="handleItemClick('Sinister Halo')">Sinister Halo (Starkindred)
-
-          </button>
-          <button class="Starkindred" onclick="handleItemClick('Celestial Assault')">Celestial Assault (Starkindred)
-
-          </button>
-          <button class="Visionshaper" onclick="handleItemClick('Illusory Counter')">Illusory Counter (Visionshaper)
-
-          </button>
-          <button class="Visionshaper" onclick="handleItemClick('Illusory Realm')">Illusory Realm (Visionshaper)
-
-          </button>
-          <button class="Visionshaper" onclick="handleItemClick('Illusory Servants')">Illusory Servants (Visionshaper)</button>
+          
+  
+          <div id="leftBottomWindow"> 
+            <img src="image/clan.png" alt="clan">
           </div>
-
-          <button id="monsterButton" onclick="toggleContainer('monsterContainer')">monster mantras</button>
-          <div id="monsterContainer" class="hidden">
-              <button onclick="handleItemClick('Brachial Spear')">Brachial Spear (Bonekeeper)
-              </button>
-              <button onclick="handleItemClick('Coral Spear')">Coral Spear (Megalodaunt)
-              </button>
-              <button onclick="handleItemClick('Dread Breath')">Dread Breath (Dread Serpent)
-              </button>
-              <button onclick="handleItemClick('Beast Burrow')">Beast Burrow (Thresher)
-              </button>
-              <button onclick="handleItemClick('Enforcer Pull')">Enforcer Pull (Enforcer)
-              </button>
-              <button onclick="handleItemClick('Mecha Gatling')">Mecha Gatling (Mechalodaunt)
-              </button>
-              <button onclick="handleItemClick('Abyssal Ridge')">Abyssal Ridge (Nautilodaunt)
-                (Terrapod)
-              </button>
-              
-          </div>
-
-        
-
+          
         </div>
-        
-
-        <div id="leftBottomWindow"> 
-          <img src="image/clan.png" alt="clan">
+        <div class="rightContainer">
+          <div class="rightWindow" id="infoText"> 
+            <h1>Deepwoken modifier</h1>
+            <p>
+              welcome to the deepwokenMod
+              here you can
+           
+              <p>1.view any modifications of your mantras in a convenient format
+              </p>
+              <p>2.see the effect of your modifications
+              </p>
+              <p>3.you can also look at existing leveling effects
+              </p></p>
+              <a href="https://www.roblox.com/users/462691831/profile" target="_blank"><button>@sans_13377</button></a><a href="https://www.roblox.com/users/1558759279/profile" target="_blank"><button>@zbananasx</button></a>
+          </div>
         </div>
         
       </div>
-      <div class="rightContainer">
-        <div class="rightWindow" id="infoText"> 
-          <h1>Deepwoken modifier</h1>
-          <p>
-            welcome to the deepwokenMod
-            here you can
-         
-            <p>1.view any modifications of your mantras in a convenient format
-            </p>
-            <p>2.see the effect of your modifications
-            </p>
-            <p>3.you can also look at existing leveling effects
-            </p></p>
-            <a href="https://www.roblox.com/users/462691831/profile" target="_blank"><button>@sans_13377</button></a><a href="https://www.roblox.com/users/1558759279/profile" target="_blank"><button>@zbananasx</button></a>
-        </div>
-      </div>
-      
     </div>
     <script src="script.js"></script>
 
