@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/deepwoken-modifier/static/css/main.670cd84d.css",
-    "main.js": "/deepwoken-modifier/static/js/main.c9fdeab6.js",
-    "static/media/clan.png": "/deepwoken-modifier/static/media/clan.1530da63388678a1eceb.png",
-    "index.html": "/deepwoken-modifier/index.html",
-    "main.670cd84d.css.map": "/deepwoken-modifier/static/css/main.670cd84d.css.map",
-    "main.c9fdeab6.js.map": "/deepwoken-modifier/static/js/main.c9fdeab6.js.map"
+    "main.css": "/static/css/main.670cd84d.css",
+    "main.js": "/static/js/main.a4b6a94d.js",
+    "static/media/clan.png": "/static/media/clan.1530da63388678a1eceb.png",
+    "index.html": "/index.html",
+    "main.670cd84d.css.map": "/static/css/main.670cd84d.css.map",
+    "main.a4b6a94d.js.map": "/static/js/main.a4b6a94d.js.map"
   },
   "entrypoints": [
     "static/css/main.670cd84d.css",
-    "static/js/main.c9fdeab6.js"
+    "static/js/main.a4b6a94d.js"
   ]
 }
