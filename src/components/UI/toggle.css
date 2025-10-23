@@ -1,0 +1,10 @@
+.toggleContent {
+  margin: auto;
+  width: 125px;
+  background-image: url("image/background3.png");
+  background-repeat: repeat;
+  border: 5px solid transparent;
+  border-image: url("image/border.png") 45%;
+  border-image-width: 15px;
+  border-image-outset: 2px;
+}
