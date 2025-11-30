@@ -5,6 +5,7 @@ import mantras from "./info";
 import "./styles/App.css";
 import "./components/UI/rightWindow.css";
 import clanImage from "./components/UI/image/clan.png";
+import sarigma from "./components/UI/image/depSarigma.png";
 
 function App() {
   const [selectedMantra, setSelectedMantra] = useState(null);
@@ -1019,10 +1020,7 @@ function App() {
             )}
           </div>
           <div className="rightBottomWindow">
-            <img
-              src="https://media1.tenor.com/m/Bsv6xQTyqt8AAAAd/deepwoken-sharko-dancing-megalodaunt-dacing.gif"
-              alt="gif"
-            />
+            <img src={sarigma} alt="sarigma" />
           </div>
         </div>
       </div>
