@@ -1,14 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.670cd84d.css",
-    "main.js": "/static/js/main.b7c46ecd.js",
+    "main.js": "/static/js/main.2ebc3a4f.js",
+    "static/media/depSarigma.png": "/static/media/depSarigma.3444a5adf648a409e43f.png",
     "static/media/clan.png": "/static/media/clan.1530da63388678a1eceb.png",
     "index.html": "/index.html",
     "main.670cd84d.css.map": "/static/css/main.670cd84d.css.map",
-    "main.b7c46ecd.js.map": "/static/js/main.b7c46ecd.js.map"
+    "main.2ebc3a4f.js.map": "/static/js/main.2ebc3a4f.js.map"
   },
   "entrypoints": [
     "static/css/main.670cd84d.css",
-    "static/js/main.b7c46ecd.js"
+    "static/js/main.2ebc3a4f.js"
   ]
 }
